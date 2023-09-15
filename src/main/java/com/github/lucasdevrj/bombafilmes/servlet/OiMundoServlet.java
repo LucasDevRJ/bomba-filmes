@@ -1,6 +1,7 @@
 package com.github.lucasdevrj.bombafilmes.servlet;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,9 +13,13 @@ import javax.servlet.http.HttpServletResponse;
 public class OiMundoServlet extends HttpServlet {
 
 	@Override
-	protected void service(HttpServletRequest req, HttpServletResponse resp) {
+	protected void service(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		
-		
-		
+		PrintWriter out = resp.getWriter();
+		out.println("<html>");
+		out.println("<body>");
+		out.println("Ola Mundo com Servlet!");
+		out.println("</body>");
+		out.println("</html>");
 	}
 }
