@@ -10,6 +10,16 @@ public class Filme {
 	private String elenco;
 	private String urlImagem;
 	
+	public Filme(String nome, String sinopse, Integer faixaEtaria, String genero, 
+			String elenco, String urlImagem) {
+		this.nome = nome;
+		this.sinopse = sinopse;
+		this.faixaEtaria = faixaEtaria;
+		this.genero = genero;
+		this.elenco = elenco;
+		this.urlImagem = urlImagem;
+	}
+
 	public String getNome() {
 		return nome;
 	}
