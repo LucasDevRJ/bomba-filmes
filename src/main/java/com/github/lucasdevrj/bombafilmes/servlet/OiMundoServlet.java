@@ -3,7 +3,6 @@ package com.github.lucasdevrj.bombafilmes.servlet;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -21,5 +20,7 @@ public class OiMundoServlet extends HttpServlet {
 		out.println("Ola Mundo com Servlet!");
 		out.println("</body>");
 		out.println("</html>");
+		
+		System.out.println("O Servlet OiMundoServlet foi chamado!");
 	}
 }
