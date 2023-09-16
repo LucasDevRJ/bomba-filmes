@@ -6,9 +6,9 @@
 	</head>
 	<body>
 		<main>
-			<form action="/bomba-filmes/novoFilme">
+			<form action="/bomba-filmes/novoFilme" method="post">
 				<label for="nome">Nome:</label>
-				<input type="text" id="nome" name="nome">
+				<input type="text" id="nome" name="nome" required>
 				
 				<label for="sinopse">Sinopse:</label>
 				<textarea id="sinopse" name="sinopse" rows="4" cols="50"></textarea>
@@ -22,7 +22,7 @@
 				<label for="elenco">Elenco:</label>
 				<input type="text" id="elenco" name="elenco">
 				
-				<input type="button" value="Cadastrar">
+				<input type="submit" value="Cadastrar">
 			</form>
 		</main>
 	</body>
