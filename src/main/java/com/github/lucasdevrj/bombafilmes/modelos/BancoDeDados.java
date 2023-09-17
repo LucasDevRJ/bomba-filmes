@@ -5,10 +5,14 @@ import java.util.List;
 
 public class BancoDeDados {
 
-	private List<Filme> filmes = new ArrayList<>();
+	private static List<Filme> filmes = new ArrayList<>();
 	
 	public void adicionaFilme(Filme filme) {
-		this.filmes.add(filme);
+		BancoDeDados.filmes.add(filme);
 		System.out.println("O filme " + filme.getNome() + " foi adicionado com sucesso!");
+	}
+	
+	public static List<Filme> getFilmes() {
+		return filmes;
 	}
 }
