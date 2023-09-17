@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.github.lucasdevrj.bombafilmes.modelos.BancoDeDados;
 import com.github.lucasdevrj.bombafilmes.modelos.Filme;
 
 
@@ -30,6 +31,7 @@ public class NovoFilmeServlet extends HttpServlet {
 		Filme filme = new Filme(nome, sinopse, faixaEtaria, genero, elenco, imagem);
 		
 		BancoDeDados bancoDeDados = new BancoDeDados();
+		bancoDeDados.adicionaFilme(filme);
 		
 		PrintWriter out = response.getWriter();
 		out.println("<html>");
