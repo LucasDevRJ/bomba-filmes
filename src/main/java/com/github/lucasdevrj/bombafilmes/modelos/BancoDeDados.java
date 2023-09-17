@@ -12,7 +12,7 @@ public class BancoDeDados {
 		System.out.println("O filme " + filme.getNome() + " foi adicionado com sucesso!");
 	}
 	
-	public static List<Filme> getFilmes() {
+	public List<Filme> getFilmes() {
 		return filmes;
 	}
 }
