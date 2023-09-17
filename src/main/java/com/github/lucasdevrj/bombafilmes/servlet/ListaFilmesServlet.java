@@ -26,11 +26,21 @@ public class ListaFilmesServlet extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		
 		out.println("<html>");
+		out.println("<head>");
+		out.println("<meta charset='utf-8>'");
+		out.println("</head>");
 		out.println("<body>");
 		out.println("<ul>");
 		
 		for (Filme filme : filmes) {
-			out.println("<li>" + filme.getNome() + "</li>");
+			out.print("<li>");
+			out.println("<p>" + filme.getNome() + "</p>");
+			out.println("<p>" + filme.getSinopse()+ "</p>");
+			out.println("<p>" + filme.getFaixaEtaria()+ "</p>");
+			out.println("<p>" + filme.getGenero()+ "</p>");
+			out.println("<p>" + filme.getElenco()+ "</p>");
+			out.println("<img src='${filme.getUrlImagem()}'>");
+			out.print("</li>");
 		}
 		
 		out.println("</ul>");
