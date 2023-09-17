@@ -5,12 +5,12 @@ public class Filme {
 	private Integer id;
 	private String nome;
 	private String sinopse;
-	private Integer faixaEtaria;
+	private String faixaEtaria;
 	private String genero;
 	private String elenco;
 	private String urlImagem;
 	
-	public Filme(String nome, String sinopse, Integer faixaEtaria, String genero, 
+	public Filme(String nome, String sinopse, String faixaEtaria, String genero, 
 			String elenco, String urlImagem) {
 		this.nome = nome;
 		this.sinopse = sinopse;
@@ -36,11 +36,11 @@ public class Filme {
 		this.sinopse = sinopse;
 	}
 	
-	public Integer getFaixaEtaria() {
+	public String getFaixaEtaria() {
 		return faixaEtaria;
 	}
 	
-	public void setFaixaEtaria(Integer faixaEtaria) {
+	public void setFaixaEtaria(String faixaEtaria) {
 		this.faixaEtaria = faixaEtaria;
 	}
 	
