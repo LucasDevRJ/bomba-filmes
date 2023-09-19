@@ -1,12 +1,9 @@
 <%
-	String nome = "Corações de Ferro";
-	String sinopse = "Don, junto com sua tripulação de cinco membros, " +
-	"embarca em uma missão que coloca muitas vidas em perigo enquanto se preparam para atacar"
-	+ "o exército nazista.";
-	String faixaEtaria = "18+";
-	String genero = "Guerra/Ação";
-	String elenco = "Shia LaBeouf, Jon Bernthal, Scott Eastwood...";
-	String urlImagem = "https://www.themoviedb.org/t/p/w500/pfte7wdMobMF4CVHuOxyu6oqeeA.jpg";
+	String nome = (String) request.getAttribute("nome");
+	String sinopse = (String) request.getAttribute("sinopse");
+	String faixaEtaria = (String) request.getAttribute("faixa-etaria");
+	String genero = (String) request.getAttribute("genero");
+	String elenco = (String) request.getAttribute("elenco");
 	
 	System.out.println(nome);
 %>
@@ -20,12 +17,11 @@
 	<body>
 		<ul>
 			<li>
-				<h2> <%out.println(nome);%> </h2>
-				<p> <%out.println(sinopse);%> </p>
+				<h2> <%=nome%> </h2>
+				<p> <%=sinopse%> </p>
 				<p> <%=faixaEtaria%> </p>
-				<p> <%out.println(genero);%> </p>
-				<p> <%out.println(elenco);%> </p>
-				<p> <%out.println(urlImagem);%> </p>
+				<p> <%=genero%> </p>
+				<p> <%=elenco%> </p>
 			</li>
 		</ul>
 	</body>

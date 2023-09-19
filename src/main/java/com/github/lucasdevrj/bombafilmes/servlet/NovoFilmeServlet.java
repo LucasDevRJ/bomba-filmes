@@ -3,6 +3,7 @@ package com.github.lucasdevrj.bombafilmes.servlet;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -33,12 +34,12 @@ public class NovoFilmeServlet extends HttpServlet {
 		BancoDeDados bancoDeDados = new BancoDeDados();
 		bancoDeDados.adicionaFilme(filme);
 		
-		PrintWriter out = response.getWriter();
-		out.println("<html>");
-		out.println("<body>");
-		out.println("<h1>Filme " + nome + " Cadastrado com Sucesso!</h1>");
-		out.println("</body>");
-		out.println("</html>");
+		RequestDispatcher rd = request.getRequestDispatcher("/novoFilmeCriado.jsp");
+		request.setAttribute("nome", filme.getNome());
+		request.setAttribute("sinopse", filme.getSinopse());
+		request.setAttribute("faixa-etaria", filme.getFaixaEtaria());
+		request.setAttribute("genero", filme.getGenero());
+		request.setAttribute("elenco", filme.getElenco());
+		rd.forward(request, response);
 	}
-
 }
