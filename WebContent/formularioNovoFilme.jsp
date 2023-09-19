@@ -1,8 +1,11 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
+		<meta charset="ISO-8859-1">
 		<title>Novo Filme</title>
-		<meta charset="utf-8">
 	</head>
 	<body>
 		<main>
@@ -13,10 +16,10 @@
 				<label for="sinopse">Sinopse:</label>
 				<textarea id="sinopse" name="sinopse" rows="4" cols="50"></textarea>
 				
-				<label for="faixa-etaria">Faixa EtÃ¡ria:</label>
+				<label for="faixa-etaria">Faixa Etária:</label>
 				<input type="text" id="faixa-etaria" name="faixa-etaria">
 				
-				<label for="genero">GÃªnero:</label>
+				<label for="genero">Gênero:</label>
 				<input type="text" id="genero" name="genero">
 				
 				<label for="elenco">Elenco:</label>
