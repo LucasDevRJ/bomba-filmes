@@ -7,6 +7,8 @@
 	String genero = "Guerra/Ação";
 	String elenco = "Shia LaBeouf, Jon Bernthal, Scott Eastwood...";
 	String urlImagem = "https://www.themoviedb.org/t/p/w500/pfte7wdMobMF4CVHuOxyu6oqeeA.jpg";
+	
+	System.out.println(nome);
 %>
 
 <!DOCTYPE html>
@@ -18,7 +20,12 @@
 	<body>
 		<ul>
 			<li>
-				<h2>nome</h2>
+				<h2> <%out.println(nome);%> </h2>
+				<p> <%out.println(sinopse);%> </p>
+				<p> <%=faixaEtaria%> </p>
+				<p> <%out.println(genero);%> </p>
+				<p> <%out.println(elenco);%> </p>
+				<p> <%out.println(urlImagem);%> </p>
 			</li>
 		</ul>
 	</body>
