@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -23,29 +24,10 @@ public class ListaFilmesServlet extends HttpServlet {
 		
 		BancoDeDados bancoDeDados = new BancoDeDados();
 		List<Filme> filmes = bancoDeDados.getFilmes();
-		PrintWriter out = response.getWriter();
+		request.setAttribute("filmes", filmes);
 		
-		out.println("<html>");
-		out.println("<head>");
-		out.println("<meta charset='utf-8>'");
-		out.println("</head>");
-		out.println("<body>");
-		out.println("<ul>");
-		
-		for (Filme filme : filmes) {
-			out.print("<li>");
-			out.println("<p>" + filme.getNome() + "</p>");
-			out.println("<p>" + filme.getSinopse()+ "</p>");
-			out.println("<p>" + filme.getFaixaEtaria()+ "</p>");
-			out.println("<p>" + filme.getGenero()+ "</p>");
-			out.println("<p>" + filme.getElenco()+ "</p>");
-			out.println("<img src='${filme.getUrlImagem()}'>");
-			out.print("</li>");
-		}
-		
-		out.println("</ul>");
-		out.println("</body>");
-		out.println("</html>");
+		RequestDispatcher rd = request.getRequestDispatcher("/listaFilmes.jsp");
+		rd.forward(request, response);
 	}
 
 }
