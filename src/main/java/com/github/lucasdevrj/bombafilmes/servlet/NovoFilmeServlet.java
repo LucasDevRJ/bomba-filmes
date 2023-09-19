@@ -24,12 +24,12 @@ public class NovoFilmeServlet extends HttpServlet {
 		
 		String nome = request.getParameter("nome");
 		String sinopse = request.getParameter("sinopse");
-		String faixaEtaria = request.getParameter("faixa-etaria");
+		String faixaEtaria = request.getParameter("faixaEtaria");
 		String genero = request.getParameter("genero");
 		String elenco = request.getParameter("elenco");
-		String imagem = request.getParameter("imagem");
+		String duracao = request.getParameter("duracao");
 		
-		Filme filme = new Filme(nome, sinopse, faixaEtaria, genero, elenco, imagem);
+		Filme filme = new Filme(nome, sinopse, faixaEtaria, genero, elenco, duracao);
 		
 		BancoDeDados bancoDeDados = new BancoDeDados();
 		bancoDeDados.adicionaFilme(filme);
@@ -37,9 +37,10 @@ public class NovoFilmeServlet extends HttpServlet {
 		RequestDispatcher rd = request.getRequestDispatcher("/novoFilmeCriado.jsp");
 		request.setAttribute("nome", filme.getNome());
 		request.setAttribute("sinopse", filme.getSinopse());
-		request.setAttribute("faixa-etaria", filme.getFaixaEtaria());
+		request.setAttribute("faixaEtaria", filme.getFaixaEtaria());
 		request.setAttribute("genero", filme.getGenero());
 		request.setAttribute("elenco", filme.getElenco());
+		request.setAttribute("duracao", filme.getDuracao());
 		rd.forward(request, response);
 	}
 }

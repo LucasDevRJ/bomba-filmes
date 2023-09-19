@@ -16,8 +16,8 @@
 				<label for="sinopse">Sinopse:</label>
 				<textarea id="sinopse" name="sinopse" rows="4" cols="50"></textarea>
 				
-				<label for="faixa-etaria">Faixa Etária:</label>
-				<input type="text" id="faixa-etaria" name="faixa-etaria">
+				<label for="faixaEtaria">Faixa Etária:</label>
+				<input type="text" id="faixaEtaria" name="faixaEtaria">
 				
 				<label for="genero">Gênero:</label>
 				<input type="text" id="genero" name="genero">
@@ -25,8 +25,8 @@
 				<label for="elenco">Elenco:</label>
 				<input type="text" id="elenco" name="elenco">
 				
-				<label for="imagem">URL da imagem:</label>
-				<input type="url" id="imagem" name="imagem">
+				<label for="duracao">Duração:</label>
+				<input type="text" id="duracao" name="duracao">
 				
 				<input type="submit" value="Cadastrar">
 			</form>

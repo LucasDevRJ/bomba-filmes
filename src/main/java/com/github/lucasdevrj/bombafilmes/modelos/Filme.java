@@ -8,16 +8,16 @@ public class Filme {
 	private String faixaEtaria;
 	private String genero;
 	private String elenco;
-	private String urlImagem;
+	private String duracao;
 	
 	public Filme(String nome, String sinopse, String faixaEtaria, String genero, 
-			String elenco, String urlImagem) {
+			String elenco, String duracao) {
 		this.nome = nome;
 		this.sinopse = sinopse;
 		this.faixaEtaria = faixaEtaria;
 		this.genero = genero;
 		this.elenco = elenco;
-		this.urlImagem = urlImagem;
+		this.duracao = duracao;
 	}
 
 	public String getNome() {
@@ -60,15 +60,15 @@ public class Filme {
 		this.elenco = elenco;
 	}
 	
-	public String getUrlImagem() {
-		return urlImagem;
-	}
-	
-	public void setUrlImagem(String urlImagem) {
-		this.urlImagem = urlImagem;
-	}
-	
 	public Integer getId() {
 		return id;
+	}
+	
+	public void setDuracao(String duracao) {
+		this.duracao = duracao;
+	}
+	
+	public String getDuracao() {
+		return duracao;
 	}
 }
