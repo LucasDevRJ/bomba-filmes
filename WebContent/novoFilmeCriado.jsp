@@ -13,6 +13,7 @@
 				<p> ${genero} </p>
 				<p> ${elenco} </p>
 				<p> ${duracao} </p>
+				<img alt="" src="${imagem}">
 			</li>
 		</ul>
 	</body>

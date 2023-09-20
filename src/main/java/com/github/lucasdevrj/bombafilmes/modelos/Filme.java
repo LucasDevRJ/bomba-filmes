@@ -9,15 +9,17 @@ public class Filme {
 	private String genero;
 	private String elenco;
 	private String duracao;
+	private String imagem;
 	
 	public Filme(String nome, String sinopse, String faixaEtaria, String genero, 
-			String elenco, String duracao) {
+			String elenco, String duracao, String imagem) {
 		this.nome = nome;
 		this.sinopse = sinopse;
 		this.faixaEtaria = faixaEtaria;
 		this.genero = genero;
 		this.elenco = elenco;
 		this.duracao = duracao;
+		this.imagem = imagem;
 	}
 
 	public String getNome() {
@@ -70,5 +72,13 @@ public class Filme {
 	
 	public String getDuracao() {
 		return duracao;
+	}
+	
+	public String getImagem() {
+		return imagem;
+	}
+	
+	public void setImagem(String imagem) {
+		this.imagem = imagem;
 	}
 }

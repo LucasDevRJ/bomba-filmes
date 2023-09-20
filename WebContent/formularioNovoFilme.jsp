@@ -28,6 +28,9 @@
 				<label for="duracao">Duração:</label>
 				<input type="text" id="duracao" name="duracao">
 				
+				<label for="imagem">Imagem:</label>
+				<input type="text" id="imagem" name="imagem">
+				
 				<input type="submit" value="Cadastrar">
 			</form>
 		</main>
