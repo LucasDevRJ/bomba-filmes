@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<c:url value="/novoFilmeCriado.jsp" var="novoFilmeCriado"/>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -9,7 +11,7 @@
 	</head>
 	<body>
 		<main>
-			<form action="/bomba-filmes/novoFilme" method="post">
+			<form action="${novoFilmeCriado}" method="post">
 				<label for="nome">Nome:</label>
 				<input type="text" id="nome" name="nome" required>
 				
