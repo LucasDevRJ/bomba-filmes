@@ -13,23 +13,10 @@
 	
 		<h1>Catálogo</h1>
 			
-		
 		<ul>
-			<forEach>
-				
-			</forEach>
+			<c:forEach items="${filmes}" var="filme">
+				<li> ${filme.nome} </li>
+			</c:forEach>
 		</ul>	
-		
-		<ul>
-			<%
-				List<Filme> lista = (List<Filme>) request.getAttribute("filmes");
-				for (Filme filme : lista) {
-			%>
-					<li>
-						<%= filme.getNome() %>
-						<%= filme.getSinopse() %>
-					</li>
-			<% } %>
-		</ul>
 	</body>
 </html>
