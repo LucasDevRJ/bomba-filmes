@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<c:url value="/novoFilmeCriado.jsp" var="novoFilmeCriado"/>
+<c:url value="/novoFilme" var="novoFilmeServlet"/>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -11,9 +11,9 @@
 	</head>
 	<body>
 		<main>
-			<form action="${novoFilmeCriado}" method="post">
+			<form action="${novoFilmeServlet}" method="post">
 				<label for="nome">Nome:</label>
-				<input type="text" id="nome" name="nome" required>
+				<input type="text" id="nome" name="nome">
 				
 				<label for="sinopse">Sinopse:</label>
 				<textarea id="sinopse" name="sinopse" rows="4" cols="50"></textarea>
