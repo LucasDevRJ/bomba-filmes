@@ -10,12 +10,12 @@ public class Filme {
 	private String faixaEtaria;
 	private String genero;
 	private String elenco;
-	private String duracao;
+	private Integer duracao;
 	private String imagem;
-	private String dataLancamento;
+	private Date dataLancamento;
 	
 	public Filme(String nome, String sinopse, String faixaEtaria, String genero, 
-			String elenco, String duracao, String imagem, String dataLancamento) {
+			String elenco, Integer duracao, String imagem, Date dataLancamento) {
 		this.nome = nome;
 		this.sinopse = sinopse;
 		this.faixaEtaria = faixaEtaria;
@@ -70,11 +70,11 @@ public class Filme {
 		return id;
 	}
 	
-	public void setDuracao(String duracao) {
+	public void setDuracao(Integer duracao) {
 		this.duracao = duracao;
 	}
 	
-	public String getDuracao() {
+	public Integer getDuracao() {
 		return duracao;
 	}
 	
@@ -86,11 +86,11 @@ public class Filme {
 		this.imagem = imagem;
 	}
 	
-	public String getDataLancamento() {
+	public Date getDataLancamento() {
 		return dataLancamento;
 	}
 	
-	public void setDataLancamento(String dataLancamento) {
+	public void setDataLancamento(Date dataLancamento) {
 		this.dataLancamento = dataLancamento;
 	}
 }

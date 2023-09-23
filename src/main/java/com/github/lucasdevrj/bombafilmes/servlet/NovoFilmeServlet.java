@@ -1,6 +1,10 @@
 package com.github.lucasdevrj.bombafilmes.servlet;
 
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -25,11 +29,19 @@ public class NovoFilmeServlet extends HttpServlet {
 		String faixaEtaria = request.getParameter("faixaEtaria");
 		String genero = request.getParameter("genero");
 		String elenco = request.getParameter("elenco");
-		String duracao = request.getParameter("duracao");
+		Integer duracao = Integer.getInteger("duracao");
 		String imagem = request.getParameter("imagem");
 		String dataLancamento = request.getParameter("dataLancamento");
 		
-		Filme filme = new Filme(nome, sinopse, faixaEtaria, genero, elenco, duracao, imagem, dataLancamento);
+		Date dataLancamentoFormatada;
+		try {
+			SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+			dataLancamentoFormatada = sdf.parse(dataLancamento);
+		} catch (ParseException e) {
+			throw new ServletException(e);
+		}
+		
+		Filme filme = new Filme(nome, sinopse, faixaEtaria, genero, elenco, duracao, imagem, dataLancamentoFormatada);
 		
 		BancoDeDados bancoDeDados = new BancoDeDados();
 		bancoDeDados.adicionaFilme(filme);
