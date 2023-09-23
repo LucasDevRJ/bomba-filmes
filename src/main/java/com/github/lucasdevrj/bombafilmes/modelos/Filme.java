@@ -1,18 +1,21 @@
 package com.github.lucasdevrj.bombafilmes.modelos;
 
+import java.util.Date;
+
 public class Filme {
 
 	private Integer id;
 	private String nome;
 	private String sinopse;
-	private String faixaEtaria;
+	private Integer faixaEtaria;
 	private String genero;
 	private String elenco;
-	private String duracao;
+	private Integer duracao;
 	private String imagem;
+	private Date dataLancamento;
 	
-	public Filme(String nome, String sinopse, String faixaEtaria, String genero, 
-			String elenco, String duracao, String imagem) {
+	public Filme(String nome, String sinopse, Integer faixaEtaria, String genero, 
+			String elenco, Integer duracao, String imagem) {
 		this.nome = nome;
 		this.sinopse = sinopse;
 		this.faixaEtaria = faixaEtaria;
@@ -38,11 +41,11 @@ public class Filme {
 		this.sinopse = sinopse;
 	}
 	
-	public String getFaixaEtaria() {
+	public Integer getFaixaEtaria() {
 		return faixaEtaria;
 	}
 	
-	public void setFaixaEtaria(String faixaEtaria) {
+	public void setFaixaEtaria(Integer faixaEtaria) {
 		this.faixaEtaria = faixaEtaria;
 	}
 	
@@ -66,11 +69,11 @@ public class Filme {
 		return id;
 	}
 	
-	public void setDuracao(String duracao) {
+	public void setDuracao(Integer duracao) {
 		this.duracao = duracao;
 	}
 	
-	public String getDuracao() {
+	public Integer getDuracao() {
 		return duracao;
 	}
 	
@@ -80,5 +83,13 @@ public class Filme {
 	
 	public void setImagem(String imagem) {
 		this.imagem = imagem;
+	}
+	
+	public Date getDataLancamento() {
+		return dataLancamento;
+	}
+	
+	public void setDataLancamento(Date dataLancamento) {
+		this.dataLancamento = dataLancamento;
 	}
 }

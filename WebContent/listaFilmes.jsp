@@ -16,6 +16,12 @@
 		<ul>
 			<c:forEach items="${filmes}" var="filme">
 				<li> ${filme.nome} </li>
+				<li> ${filme.sinopse} </li>
+				<li> ${filme.faixaEtaria} </li>
+				<li> ${filme.genero} </li>
+				<li> ${filme.elenco} </li>
+				<li> ${filme.duracao} </li>
+				<li> ${filme.imagem} </li>
 			</c:forEach>
 		</ul>	
 	</body>
