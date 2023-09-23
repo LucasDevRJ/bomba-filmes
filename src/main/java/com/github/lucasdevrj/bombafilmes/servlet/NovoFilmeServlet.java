@@ -27,8 +27,9 @@ public class NovoFilmeServlet extends HttpServlet {
 		String elenco = request.getParameter("elenco");
 		String duracao = request.getParameter("duracao");
 		String imagem = request.getParameter("imagem");
+		String dataLancamento = request.getParameter("dataLancamento");
 		
-		Filme filme = new Filme(nome, sinopse, faixaEtaria, genero, elenco, duracao, imagem);
+		Filme filme = new Filme(nome, sinopse, faixaEtaria, genero, elenco, duracao, imagem, dataLancamento);
 		
 		BancoDeDados bancoDeDados = new BancoDeDados();
 		bancoDeDados.adicionaFilme(filme);
@@ -41,6 +42,7 @@ public class NovoFilmeServlet extends HttpServlet {
 		request.setAttribute("elenco", filme.getElenco());
 		request.setAttribute("duracao", filme.getDuracao());
 		request.setAttribute("imagem", filme.getImagem());
+		request.setAttribute("dataLancamento", filme.getDataLancamento());
 		rd.forward(request, response);
 	}
 }
