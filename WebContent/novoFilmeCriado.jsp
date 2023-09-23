@@ -17,6 +17,7 @@
 					<p> ${elenco} </p>
 					<p> ${duracao} </p>
 					<img alt="" src="${imagem}">
+					<p> ${anoLancamento} </p>
 				</li>
 			</ul>
 		</c:if>

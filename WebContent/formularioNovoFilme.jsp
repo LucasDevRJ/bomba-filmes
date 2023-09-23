@@ -33,6 +33,9 @@
 				<label for="imagem">Imagem:</label>
 				<input type="text" id="imagem" name="imagem">
 				
+				<label for="anoLancamento">Lançamento:</label>
+				<input type="text" id="anoLancamento" name="anoLancamento">
+				
 				<input type="submit" value="Cadastrar">
 			</form>
 		</main>

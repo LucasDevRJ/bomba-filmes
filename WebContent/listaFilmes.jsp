@@ -22,6 +22,7 @@
 				<li> ${filme.elenco} </li>
 				<li> ${filme.duracao} </li>
 				<li> ${filme.imagem} </li>
+				<li> ${filme.anoLancamento} </li>
 			</c:forEach>
 		</ul>	
 	</body>

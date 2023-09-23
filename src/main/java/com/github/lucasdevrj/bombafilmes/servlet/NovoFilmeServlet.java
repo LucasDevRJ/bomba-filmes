@@ -1,10 +1,6 @@
 package com.github.lucasdevrj.bombafilmes.servlet;
 
 import java.io.IOException;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -29,19 +25,14 @@ public class NovoFilmeServlet extends HttpServlet {
 		String faixaEtaria = request.getParameter("faixaEtaria");
 		String genero = request.getParameter("genero");
 		String elenco = request.getParameter("elenco");
-		Integer duracao = Integer.getInteger("duracao");
+		String duracaoString = request.getParameter("duracao");
 		String imagem = request.getParameter("imagem");
-		String dataLancamento = request.getParameter("dataLancamento");
+		String anoLancamentoString = request.getParameter("anoLancamento");
 		
-		Date dataLancamentoFormatada;
-		try {
-			SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-			dataLancamentoFormatada = sdf.parse(dataLancamento);
-		} catch (ParseException e) {
-			throw new ServletException(e);
-		}
+		Integer duracao = Integer.parseInt(duracaoString);
+		Integer anoLancamento = Integer.parseInt(anoLancamentoString);
 		
-		Filme filme = new Filme(nome, sinopse, faixaEtaria, genero, elenco, duracao, imagem, dataLancamentoFormatada);
+		Filme filme = new Filme(nome, sinopse, faixaEtaria, genero, elenco, duracao, imagem, anoLancamento);
 		
 		BancoDeDados bancoDeDados = new BancoDeDados();
 		bancoDeDados.adicionaFilme(filme);
@@ -54,7 +45,7 @@ public class NovoFilmeServlet extends HttpServlet {
 		request.setAttribute("elenco", filme.getElenco());
 		request.setAttribute("duracao", filme.getDuracao());
 		request.setAttribute("imagem", filme.getImagem());
-		request.setAttribute("dataLancamento", filme.getDataLancamento());
+		request.setAttribute("anoLancamento", filme.getAnoLancamento());
 		rd.forward(request, response);
 	}
 }
