@@ -16,18 +16,20 @@
 		</header>
 		
 		<main>
-			<h2>Catálogo</h2>
+			<h2 class="titulo">Catálogo</h2>
 			
-			<ul>
+			<ul class="lista">
 				<c:forEach items="${filmes}" var="filme">
-					<li> ${filme.nome} </li>
-					<li> ${filme.sinopse} </li>
-					<li> ${filme.faixaEtaria} </li>
-					<li> ${filme.genero} </li>
-					<li> ${filme.elenco} </li>
-					<li> ${filme.duracao} </li>
-					<li> ${filme.imagem} </li>
-					<li> ${filme.anoLancamento} </li>
+					<li class="filme">
+						<p class="atributo"> ${filme.imagem} </p>
+						<p class="atributo"> ${filme.nome} </p>
+						<p class="atributo"> ${filme.sinopse} </p>
+						<p class="atributo"> ${filme.faixaEtaria} </p>
+						<p class="atributo"> ${filme.genero} </p>
+						<p class="atributo"> ${filme.anoLancamento} </p>
+						<p class="atributo"> ${filme.duracao} </p>
+						<p class="atributo"> ${filme.elenco} </p>
+					</li>
 				</c:forEach>
 			</ul>
 		</main>

@@ -7,3 +7,16 @@
 	padding: 100px 50px;
 	background-color: #FF6347;
 }
+
+.titulo {
+	font-size: 30px;
+	margin: 80px 50px;
+}
+
+.lista {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	align-content: center;
+}
