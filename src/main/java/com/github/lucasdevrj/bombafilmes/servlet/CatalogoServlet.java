@@ -14,8 +14,8 @@ import javax.servlet.http.HttpServletResponse;
 import com.github.lucasdevrj.bombafilmes.modelos.BancoDeDados;
 import com.github.lucasdevrj.bombafilmes.modelos.Filme;
 
-@WebServlet("/listaFilmes")
-public class ListaFilmesServlet extends HttpServlet {
+@WebServlet("/catalogo")
+public class CatalogoServlet extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
        
@@ -26,7 +26,7 @@ public class ListaFilmesServlet extends HttpServlet {
 		List<Filme> filmes = bancoDeDados.getFilmes();
 		request.setAttribute("filmes", filmes);
 		
-		RequestDispatcher rd = request.getRequestDispatcher("/listaFilmes.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("/catalogo.jsp");
 		rd.forward(request, response);
 	}
 

@@ -2,12 +2,13 @@
     pageEncoding="ISO-8859-1"%>
 <%@ page import="java.util.List, com.github.lucasdevrj.bombafilmes.modelos.Filme"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<c:url value="/formularioNovoFilme.jsp" var="formulario"/>
 
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
 		<meta charset="ISO-8859-1">
-		<title>Principal</title>
+		<title>Catálogo</title>
 		<link rel="stylesheet" type="text/css" href="styles.css">
 	</head>
 	<body>
@@ -33,5 +34,9 @@
 				</c:forEach>
 			</ul>
 		</main>
+		
+		<footer class="rodape">
+			
+		</footer>
 	</body>
 </html>
