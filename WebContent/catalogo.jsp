@@ -13,7 +13,7 @@
 	</head>
 	<body>
 		<header class="cabecalho">
-			<h1>Bomba Filmes</h1>
+			<h1 class="logo">Bomba Filmes</h1>
 		</header>
 		
 		<main>
