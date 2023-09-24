@@ -17,7 +17,7 @@
 			<h1 class="logo">Bomba Filmes</h1>
 		</header>
 		
-		<main>
+		<main class="principal">
 			<section class="links">
 				<a  href="${cadastro}" class="botao">
 					Cadastrar Filme

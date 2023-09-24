@@ -16,7 +16,7 @@
 			<h1 class="logo">Bomba Filmes</h1>
 		</header>
 		
-		<main>
+		<main class="principal">
 			<h2 class="titulo">Catálogo</h2>
 			
 			<ul class="lista">
