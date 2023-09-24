@@ -3,7 +3,6 @@
 <%@ page import="java.util.List, com.github.lucasdevrj.bombafilmes.modelos.Filme"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <c:url value="/cadastro" var="cadastro"/>
-<c:url value="/catalogo" var="catalogo"/>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -40,10 +39,6 @@
 			<section class="links">
 				<a  href="${cadastro}" class="botao">
 					Cadastrar Filme
-				</a>
-			
-				<a href="${catalogo}" class="botao">
-					Catálogo
 				</a>
 			</section>
 		</main>

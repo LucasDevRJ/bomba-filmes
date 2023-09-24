@@ -23,8 +23,9 @@
 
 .lista {
 	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
+	gap: 0 20px;
+	padding: 0 20px;
+	margin: 30px 0;
 }
 
 .filme {
@@ -42,6 +43,7 @@
 
 .atributo {
 	font-size: 20px;
+	margin: 0 10px;
 }
 
 .links {

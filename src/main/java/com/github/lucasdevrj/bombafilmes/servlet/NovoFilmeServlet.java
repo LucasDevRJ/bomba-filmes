@@ -39,7 +39,7 @@ public class NovoFilmeServlet extends HttpServlet {
 		BancoDeDados bancoDeDados = new BancoDeDados();
 		bancoDeDados.adicionaFilme(filme);
 		
-		RequestDispatcher rd = request.getRequestDispatcher("/principal.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("/principal");
 		request.setAttribute("nome", filme.getNome());
 		request.setAttribute("sinopse", filme.getSinopse());
 		request.setAttribute("faixaEtaria", filme.getFaixaEtaria());
