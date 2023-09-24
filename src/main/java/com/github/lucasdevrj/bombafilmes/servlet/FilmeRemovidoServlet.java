@@ -9,25 +9,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.github.lucasdevrj.bombafilmes.modelos.BancoDeDados;
- 
-@WebServlet("/removeFilme")
-public class RemoveFilmeServlet extends HttpServlet {
-	
+@WebServlet("/filmeRemovido")
+public class FilmeRemovidoServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		String idString = request.getParameter("id");
-		Integer id = Integer.valueOf(idString);
-		
-		BancoDeDados filmes = new BancoDeDados();
-		filmes.removeFilme(id);
-		
-		response.sendRedirect("filmeRemovido");
-		
-//		RequestDispatcher rd = request.getRequestDispatcher("/removido.jsp");
-//		rd.forward(request, response);
+		RequestDispatcher rd = request.getRequestDispatcher("/removido.jsp");
+		rd.forward(request, response);
 	}
 
 }

@@ -31,7 +31,7 @@
 							<p class="atributo">Ano: ${filme.anoLancamento} </p>
 							<p class="atributo">Duração ${filme.duracao} Minutos</p>
 							<p class="atributo">Elenco: ${filme.elenco} </p>
-							<a href="/bombafilmes/removeFilme?id=${filme.id}">Remover</a>
+							<a href="/bomba-filmes/removeFilme?id=${filme.id}">Remover</a>
 						</li>
 					</c:forEach>
 				</ul>

@@ -82,6 +82,10 @@
 	background-color: #f03c02;
 }
 
+.mensagem {
+	text-align: center;
+	margin: 30px 0;
+}
 .rodape {
 	padding: 150px 0;
 	background-color: #6b0103;

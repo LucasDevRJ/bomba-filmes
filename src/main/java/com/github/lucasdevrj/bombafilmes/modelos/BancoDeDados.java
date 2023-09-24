@@ -1,6 +1,7 @@
 package com.github.lucasdevrj.bombafilmes.modelos;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class BancoDeDados {
@@ -22,6 +23,18 @@ public class BancoDeDados {
 		filme.setId(BancoDeDados.identificador++);
 		BancoDeDados.filmes.add(filme);
 		System.out.println("O filme " + filme.getNome() + " foi adicionado com sucesso!");
+	}
+	
+	public void removeFilme(Integer id) {
+		Iterator<Filme> it = filmes.iterator();
+		
+		while (it.hasNext()) {
+			Filme filme = it.next();
+			
+			if (filme.getId() == id) {
+				it.remove();
+			}
+		}
 	}
 	
 	public List<Filme> getFilmes() {
