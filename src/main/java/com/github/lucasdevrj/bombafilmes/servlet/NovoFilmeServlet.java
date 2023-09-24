@@ -39,7 +39,6 @@ public class NovoFilmeServlet extends HttpServlet {
 		BancoDeDados bancoDeDados = new BancoDeDados();
 		bancoDeDados.adicionaFilme(filme);
 		
-		RequestDispatcher rd = request.getRequestDispatcher("/principal");
 		request.setAttribute("nome", filme.getNome());
 		request.setAttribute("sinopse", filme.getSinopse());
 		request.setAttribute("faixaEtaria", filme.getFaixaEtaria());
@@ -48,6 +47,11 @@ public class NovoFilmeServlet extends HttpServlet {
 		request.setAttribute("duracao", filme.getDuracao());
 		request.setAttribute("imagem", filme.getImagem());
 		request.setAttribute("anoLancamento", filme.getAnoLancamento());
-		rd.forward(request, response);
+		
+		response.sendRedirect("cadastrado");
+		
+//		RequestDispatcher rd = request.getRequestDispatcher("/filmeCriado");
+		
+//		rd.forward(request, response);
 	}
 }
