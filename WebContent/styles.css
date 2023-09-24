@@ -30,6 +30,16 @@
 	gap: 30px 0;
 }
 
+.botao {
+	text-decoration: none;
+	border-width: 1px;
+	border-style: solid;
+	padding: 20px;
+	width: 20%;
+	display: flex;
+	justify-content: center;
+}
+
 .rodape {
 	padding: 150px 0;
 	background-color: #FF4500;
