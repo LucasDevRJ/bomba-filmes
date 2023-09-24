@@ -24,7 +24,15 @@ public class Filme {
 		this.imagem = imagem;
 		this.anoLancamento = anoLancamento;
 	}
-
+	
+	public Integer getId() {
+		return id;
+	}
+	
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	
 	public String getNome() {
 		return nome;
 	}
@@ -65,9 +73,6 @@ public class Filme {
 		this.elenco = elenco;
 	}
 	
-	public Integer getId() {
-		return id;
-	}
 	
 	public void setDuracao(Integer duracao) {
 		this.duracao = duracao;
