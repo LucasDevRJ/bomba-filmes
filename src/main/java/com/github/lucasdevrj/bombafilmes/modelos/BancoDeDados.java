@@ -40,4 +40,13 @@ public class BancoDeDados {
 	public List<Filme> getFilmes() {
 		return filmes;
 	}
+
+	public Filme buscaFilme(Integer id) {
+		for (Filme filme : filmes) {
+			if (filme.getId() == id) {
+				return filme;
+			}
+		}
+		return null;
+	}
 }
