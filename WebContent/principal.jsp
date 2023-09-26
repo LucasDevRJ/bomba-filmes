@@ -19,7 +19,7 @@
 		
 		<main class="principal">
 			<section class="links">
-				<a  href="${cadastro}" class="botao">
+				<a href="${cadastro}" class="botao">
 					Cadastrar Filme
 				</a>
 			
