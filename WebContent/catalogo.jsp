@@ -33,6 +33,7 @@
 							<p class="atributo">Elenco: ${filme.elenco} </p>
 							
 							<div class="catalogo-links">
+								<a href="/bomba-filmes/exibeFilme?id=${filme.id}">Editar</a>
 								<a href="/bomba-filmes/removeFilme?id=${filme.id}">Remover</a>
 							</div>
 						</li>
