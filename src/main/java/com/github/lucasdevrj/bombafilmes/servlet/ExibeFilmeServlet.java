@@ -2,6 +2,7 @@ package com.github.lucasdevrj.bombafilmes.servlet;
 
 import java.io.IOException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -25,6 +26,10 @@ public class ExibeFilmeServlet extends HttpServlet {
 		Filme filme = bancoDeDados.buscaFilme(id);
 		
 		System.out.println(filme.getNome());
+		
+		request.setAttribute("filme", filme);
+		RequestDispatcher rd = request.getRequestDispatcher("/edita.jsp");
+		rd.forward(request, response);
 		
 	}
 
