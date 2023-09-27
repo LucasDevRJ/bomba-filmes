@@ -7,18 +7,43 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * Servlet implementation class EditaFilmeServlet
- */
+import com.github.lucasdevrj.bombafilmes.modelos.BancoDeDados;
+import com.github.lucasdevrj.bombafilmes.modelos.Filme;
+
 @WebServlet("/editaFilme")
 public class EditaFilmeServlet extends HttpServlet {
+	
 	private static final long serialVersionUID = 1L;
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-	}
+		
+		System.out.println("Alterando filme");
+		
+		String idString = request.getParameter("id");
+		String nome = request.getParameter("nome");
+		String sinopse = request.getParameter("sinopse");
+		String faixaEtaria = request.getParameter("faixaEtaria");
+		String genero = request.getParameter("genero");
+		String elenco = request.getParameter("elenco");
+		String duracaoString = request.getParameter("duracao");
+		String imagem = request.getParameter("imagem");
+		String anoLancamentoString = request.getParameter("anoLancamento");
+		
+		Integer id = Integer.valueOf(idString);
+		Integer duracao = Integer.valueOf(duracaoString);
+		Integer anoLancamento = Integer.valueOf(anoLancamentoString);
+		
+		BancoDeDados bancoDeDados = new BancoDeDados();
+		Filme filme = bancoDeDados.buscaFilme(id);
+		filme.setNome(nome);
+		filme.setSinopse(sinopse);
+		filme.setFaixaEtaria(faixaEtaria);
+		filme.setGenero(genero);
+		filme.setElenco(elenco);
+		filme.setDuracao(duracao);
+		filme.setImagem(imagem);
+		filme.setAnoLancamento(anoLancamento);
+		response.sendRedirect("catalogo");
 
+	}
 }

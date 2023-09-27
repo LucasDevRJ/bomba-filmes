@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<c:url value="/novoFilme" var="novoFilmeServlet"/>
+<c:url value="/editaFilme" var="editaFilmeServlet"/>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -41,6 +41,8 @@
 				
 				<label for="anoLancamento" class="atributo">Lançamento:</label>
 				<input type="text" id="anoLancamento" name="anoLancamento" class="entrada" value="${filme.anoLancamento}">
+				
+				<input type="text" id="id" name="id" class="entrada" value="${filme.id}">
 				
 				<input type="submit" value="Cadastrar" class="botao">
 			</form>
