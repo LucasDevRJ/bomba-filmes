@@ -11,12 +11,19 @@ public class BancoDeDados {
 	
 	static {
 		Filme filme = new Filme("The Professional", 
-		"Mathilda tem apenas 12 anos de idade, mas já conhece o lado obscuro da vida: seu pai abusivo guarda drogas para policiais corruptos e a mãe a negligencia. O vizinho Léon gosta de cuidar de plantas, mas é um assassino de aluguel para o gângster Tony. Um dia, a família da menina é assassinada por um agente antidrogas desonesto, e ela se une a um relutante Léon para aprender o negócio mortal e vingar a morte dos pais.",
+		"Quando a família de Mathilda, de 12 anos, é morta, seu vizinho Leon, que é um assassino profissional, relutantemente a coloca sob sua proteção e lhe ensina os segredos de seu ofício.",
 		"18", "Ação", "Jean Reno", 110, 
 		"https://m.media-amazon.com/images/M/MV5BOTgyMWQ0ZWUtN2Q2MS00NmY0LWI3OWMtNjFkMzZlNDZjNTk0XkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_.jpg",
 		1994);
 		filme.setId(BancoDeDados.identificador++);
 		filmes.add(filme);
+		
+		Filme filme2 = new Filme("Corações de Ferro", 
+		"Don, junto com sua tripulação de cinco membros, embarca em uma missão que coloca muitas vidas em perigo enquanto se preparam para atacar o exército nazista."
+		, "18", "Guerra", "Alicia von Rittberg, Jon Bernthal, Shia LaBeouf", 134, 
+		"https://m.media-amazon.com/images/M/MV5BMjA4MDU0NTUyN15BMl5BanBnXkFtZTgwMzQxMzY4MjE@._V1_.jpg",
+		2014);
+		filmes.add(filme2);
 	}
 	
 	public void adicionaFilme(Filme filme) {
