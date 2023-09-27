@@ -12,7 +12,7 @@ public class BancoDeDados {
 	static {
 		Filme filme = new Filme("The Professional", 
 		"Quando a família de Mathilda, de 12 anos, é morta, seu vizinho Leon, que é um assassino profissional, relutantemente a coloca sob sua proteção e lhe ensina os segredos de seu ofício.",
-		"18", "Ação", "Jean Reno", 110, 
+		"18", "Ação", "Jean Reno, Natalie Portman, Gary Oldman", 110, 
 		"https://m.media-amazon.com/images/M/MV5BOTgyMWQ0ZWUtN2Q2MS00NmY0LWI3OWMtNjFkMzZlNDZjNTk0XkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_.jpg",
 		1994);
 		filme.setId(BancoDeDados.identificador++);
@@ -23,6 +23,7 @@ public class BancoDeDados {
 		, "18", "Guerra", "Alicia von Rittberg, Jon Bernthal, Shia LaBeouf", 134, 
 		"https://m.media-amazon.com/images/M/MV5BMjA4MDU0NTUyN15BMl5BanBnXkFtZTgwMzQxMzY4MjE@._V1_.jpg",
 		2014);
+		filme2.setId(BancoDeDados.identificador++);
 		filmes.add(filme2);
 	}
 	
