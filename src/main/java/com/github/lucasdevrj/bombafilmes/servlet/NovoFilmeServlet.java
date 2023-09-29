@@ -17,7 +17,6 @@ public class NovoFilmeServlet extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
-		System.out.println("Cadastrando novo filme");
 		
 		String nome = request.getParameter("nome");
 		String sinopse = request.getParameter("sinopse");
@@ -46,6 +45,6 @@ public class NovoFilmeServlet extends HttpServlet {
 		request.setAttribute("imagem", filme.getImagem());
 		request.setAttribute("anoLancamento", filme.getAnoLancamento());
 		
-		response.sendRedirect("cadastrado");
+		response.sendRedirect("catalogo");
 	}
 }
