@@ -24,8 +24,14 @@
 				<label for="sinopse" class="atributo">Sinopse:</label>
 				<textarea id="sinopse" name="sinopse" rows="4" cols="50" class="entrada">${filme.sinopse}</textarea>
 				
-				<label for="faixaEtaria" class="atributo">Faixa Etária:</label>
-				<input type="text" id="faixaEtaria" name="faixaEtaria" class="entrada" value="${filme.faixaEtaria}">
+				<select name="faixaEtaria" id="faixaEtaria" class="entrada">
+					<option value="Livre">Livre</option>
+					<option value="10">10 Anos</option>
+					<option value="12">12 Anos</option>
+					<option value="14">14 Anos</option>
+					<option value="16">16 Anos</option>
+					<option value="18">18 Anos</option>
+				</select>
 				
 				<label for="genero" class="atributo">Gênero:</label>
 				<input type="text" id="genero" name="genero" class="entrada" value="${filme.genero}">

@@ -2,6 +2,7 @@
     pageEncoding="ISO-8859-1"%>
 <%@ page import="java.util.List, com.github.lucasdevrj.bombafilmes.modelos.Filme"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <c:url value="/cadastro" var="cadastro"/>
 
 <!DOCTYPE html>
@@ -29,7 +30,8 @@
 							<p class="atributo">Faixa Etaria: ${filme.faixaEtaria} </p>
 							<p class="atributo">Gênero: ${filme.genero} </p>
 							<p class="atributo">Ano: ${filme.anoLancamento} </p>
-							<p class="atributo">Duração ${filme.duracao} Minutos</p>
+							<p><fmt:formatDate value="${filme.duracao}" pattern="HH'h':MM'm'"/></p>
+							<!--<p class="atributo">Duração ${filme.duracao} Minutos</p>-->
 							<p class="atributo">Elenco: ${filme.elenco} </p>
 							
 							<div class="catalogo-links">

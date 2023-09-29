@@ -1,5 +1,6 @@
 package com.github.lucasdevrj.bombafilmes.modelos;
 
+import java.util.Date;
 
 public class Filme {
 
@@ -9,12 +10,12 @@ public class Filme {
 	private String faixaEtaria;
 	private String genero;
 	private String elenco;
-	private Integer duracao;
+	private Date duracao;
 	private String imagem;
 	private Integer anoLancamento;
 	
 	public Filme(String nome, String sinopse, String faixaEtaria, String genero, 
-			String elenco, Integer duracao, String imagem, Integer anoLancamento) {
+			String elenco, Date duracao, String imagem, Integer anoLancamento) {
 		this.nome = nome;
 		this.sinopse = sinopse;
 		this.faixaEtaria = faixaEtaria;
@@ -74,11 +75,11 @@ public class Filme {
 	}
 	
 	
-	public void setDuracao(Integer duracao) {
+	public void setDuracao(Date duracao) {
 		this.duracao = duracao;
 	}
 	
-	public Integer getDuracao() {
+	public Date getDuracao() {
 		return duracao;
 	}
 	
