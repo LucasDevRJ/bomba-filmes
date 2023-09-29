@@ -41,9 +41,7 @@
 				
 				<label for="anoLancamento" class="atributo">Lançamento:</label>
 				<input type="text" id="anoLancamento" name="anoLancamento" class="entrada" value="${filme.anoLancamento}">
-				
-				<input type="hidden" id="id" name="id" class="entrada" value="${filme.id}">
-				
+								
 				<input type="submit" value="Editar" class="botao">
 			</form>
 		</main>

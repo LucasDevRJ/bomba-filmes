@@ -29,5 +29,4 @@ public class CatalogoServlet extends HttpServlet {
 		RequestDispatcher rd = request.getRequestDispatcher("/catalogo.jsp");
 		rd.forward(request, response);
 	}
-
 }
