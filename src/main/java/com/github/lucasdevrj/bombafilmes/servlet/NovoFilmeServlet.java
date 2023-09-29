@@ -30,14 +30,18 @@ public class NovoFilmeServlet extends HttpServlet {
 		String duracaoString = request.getParameter("duracao");
 		String imagem = request.getParameter("imagem");
 		String anoLancamentoString = request.getParameter("anoLancamento");
+		
+		System.out.println("Antes da formatação: " + duracaoString);
 				
-		SimpleDateFormat sdf = new SimpleDateFormat("HH:MM");
+		SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
 		Date duracao = null;
 		try {
 			duracao = sdf.parse(duracaoString);
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
+		
+		System.out.println("Após a formatação: " + duracao);
 		
 		Integer anoLancamento = Integer.parseInt(anoLancamentoString);
 		

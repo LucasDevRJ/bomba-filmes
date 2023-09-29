@@ -32,11 +32,11 @@
 							<p class="atributo">Ano: ${filme.anoLancamento} </p>
 							<c:if test="${filme.duracao.getHours() > 9}">
 								<p class="atributo">Duração: <fmt:formatDate value="${filme.duracao}"
-								pattern="HH'h' MM'm'"/></p>
+								pattern="HH'h' mm'm'"/></p>
 							</c:if>
 							<c:if test="${filme.duracao.getHours() <= 9}">
 								<p class="atributo">Duração: <fmt:formatDate value="${filme.duracao}"
-								pattern="H'h' MM'm'"/></p>
+								pattern="H'h' mm'm'"/></p>
 							</c:if>
 							<p class="atributo">Elenco: ${filme.elenco} </p>
 							

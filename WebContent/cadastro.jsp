@@ -19,10 +19,11 @@
 			
 			<form action="${novoFilmeServlet}" method="post" class="formulario">
 				<label for="nome" class="atributo">Nome:</label>
-				<input type="text" id="nome" name="nome" class="entrada"> 
+				<input type="text" id="nome" name="nome" class="entrada" required> 
 				
 				<label for="sinopse" class="atributo">Sinopse:</label>
-				<textarea id="sinopse" name="sinopse" rows="4" cols="50" class="entrada"></textarea>
+				<textarea id="sinopse" name="sinopse" rows="4" cols="50" class="entrada" 
+				required maxlength="200"></textarea>
 				
 				<select name="faixaEtaria" id="faixaEtaria" class="entrada">
 					<option value="Livre">Livre</option>
@@ -34,19 +35,20 @@
 				</select>
 				
 				<label for="genero" class="atributo">Gênero:</label>
-				<input type="text" id="genero" name="genero" class="entrada">
+				<input type="text" id="genero" name="genero" class="entrada" required>
 				
 				<label for="elenco" class="atributo">Elenco:</label>
-				<input type="text" id="elenco" name="elenco" class="entrada">
+				<input type="text" id="elenco" name="elenco" class="entrada" required>
 				
 				<label for="duracao" class="atributo">Duração:</label>
-				<input type="time" id="duracao" name="duracao" class="entrada">
+				<input type="time" id="duracao" name="duracao" class="entrada" required>
 				
 				<label for="imagem" class="atributo">Imagem:</label>
-				<input type="text" id="imagem" name="imagem" class="entrada">
+				<input type="url" id="imagem" name="imagem" class="entrada" required>
 				
 				<label for="anoLancamento" class="atributo">Lançamento:</label>
-				<input type="text" id="anoLancamento" name="anoLancamento" class="entrada">
+				<input type="text" id="anoLancamento" name="anoLancamento" class="entrada" 
+				pattern="[0-9]{4}" required>
 				
 				<input type="submit" value="Cadastrar" class="botao">
 			</form>
