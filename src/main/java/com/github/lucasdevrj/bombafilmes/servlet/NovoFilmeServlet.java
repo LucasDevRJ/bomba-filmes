@@ -1,25 +1,22 @@
 package com.github.lucasdevrj.bombafilmes.servlet;
 
 import java.io.IOException;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.taglibs.standard.tag.common.core.NullAttributeException;
-
 import com.github.lucasdevrj.bombafilmes.modelos.BancoDeDados;
 import com.github.lucasdevrj.bombafilmes.modelos.Filme;
-
 
 @WebServlet("/novoFilme")
 public class NovoFilmeServlet extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) 
+			throws ServletException, IOException {
 		System.out.println("Cadastrando novo filme");
 		
 		String nome = request.getParameter("nome");
@@ -34,7 +31,8 @@ public class NovoFilmeServlet extends HttpServlet {
 		Integer duracao = Integer.parseInt(duracaoString);
 		Integer anoLancamento = Integer.parseInt(anoLancamentoString);
 		
-		Filme filme = new Filme(nome, sinopse, faixaEtaria, genero, elenco, duracao, imagem, anoLancamento);
+		Filme filme = new Filme(nome, sinopse, faixaEtaria, genero, elenco, duracao, 
+				imagem, anoLancamento);
 		
 		BancoDeDados bancoDeDados = new BancoDeDados();
 		bancoDeDados.adicionaFilme(filme);
@@ -49,9 +47,5 @@ public class NovoFilmeServlet extends HttpServlet {
 		request.setAttribute("anoLancamento", filme.getAnoLancamento());
 		
 		response.sendRedirect("cadastrado");
-		
-//		RequestDispatcher rd = request.getRequestDispatcher("/filmeCriado");
-		
-//		rd.forward(request, response);
 	}
 }
