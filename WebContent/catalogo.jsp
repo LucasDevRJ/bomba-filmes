@@ -30,8 +30,14 @@
 							<p class="atributo">Faixa Etaria: ${filme.faixaEtaria} </p>
 							<p class="atributo">Gênero: ${filme.genero} </p>
 							<p class="atributo">Ano: ${filme.anoLancamento} </p>
-							<p><fmt:formatDate value="${filme.duracao}" pattern="HH'h':MM'm'"/></p>
-							<!--<p class="atributo">Duração ${filme.duracao} Minutos</p>-->
+							<c:if test="${filme.duracao.getHours() > 9}">
+								<p class="atributo">Duração: <fmt:formatDate value="${filme.duracao}"
+								pattern="HH'h' MM'm'"/></p>
+							</c:if>
+							<c:if test="${filme.duracao.getHours() <= 9}">
+								<p class="atributo">Duração: <fmt:formatDate value="${filme.duracao}"
+								pattern="H'h' MM'm'"/></p>
+							</c:if>
 							<p class="atributo">Elenco: ${filme.elenco} </p>
 							
 							<div class="catalogo-links">

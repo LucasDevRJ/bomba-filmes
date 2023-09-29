@@ -1,5 +1,7 @@
 package com.github.lucasdevrj.bombafilmes.modelos;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Iterator;
@@ -11,9 +13,19 @@ public class BancoDeDados {
 	private static Integer identificador = 1;
 	
 	static {
+		String duracaoString = "11:50";
+		SimpleDateFormat sdf = new SimpleDateFormat("HH:MM");
+		Date duracao = null;
+		try {
+			duracao = sdf.parse(duracaoString);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		Filme filme = new Filme("The Professional", 
 		"Quando a família de Mathilda, de 12 anos, é morta, seu vizinho Leon, que é um assassino profissional, relutantemente a coloca sob sua proteção e lhe ensina os segredos de seu ofício.",
-		"18", "Ação", "Jean Reno, Natalie Portman, Gary Oldman", new Date(), 
+		"18", "Ação", "Jean Reno, Natalie Portman, Gary Oldman", duracao, 
 		"https://m.media-amazon.com/images/M/MV5BOTgyMWQ0ZWUtN2Q2MS00NmY0LWI3OWMtNjFkMzZlNDZjNTk0XkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_.jpg",
 		1994);
 		filme.setId(BancoDeDados.identificador++);
@@ -21,7 +33,7 @@ public class BancoDeDados {
 		
 		Filme filme2 = new Filme("Corações de Ferro", 
 		"Don, junto com sua tripulação de cinco membros, embarca em uma missão que coloca muitas vidas em perigo enquanto se preparam para atacar o exército nazista."
-		, "18", "Guerra", "Alicia von Rittberg, Jon Bernthal, Shia LaBeouf", new Date(), 
+		, "18", "Guerra", "Alicia von Rittberg, Jon Bernthal, Shia LaBeouf", duracao, 
 		"https://m.media-amazon.com/images/M/MV5BMjA4MDU0NTUyN15BMl5BanBnXkFtZTgwMzQxMzY4MjE@._V1_.jpg",
 		2014);
 		filme2.setId(BancoDeDados.identificador++);
