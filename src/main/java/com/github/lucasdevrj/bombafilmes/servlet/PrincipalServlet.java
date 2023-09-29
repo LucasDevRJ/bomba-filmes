@@ -20,5 +20,4 @@ public class PrincipalServlet extends HttpServlet {
 		RequestDispatcher rd = request.getRequestDispatcher("/principal.jsp");
 		rd.forward(request, response);
 	}
-
 }

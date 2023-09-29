@@ -24,9 +24,19 @@
 				<label for="sinopse" class="atributo">Sinopse:</label>
 				<textarea id="sinopse" name="sinopse" rows="4" cols="50" class="entrada"></textarea>
 				
+				<select name="faixaEtaria" id="faixaEtaria" class="atributo">
+					<option value="Livre">Livre</option>
+					<option value="10 Anos">10 Anos</option>
+					<option value="12 Anos">12 Anos</option>
+					<option value="14 Anos">14 Anos</option>
+					<option value="16 Anos">16 Anos</option>
+					<option value="18 Anos">18 Anos</option>
+				</select>
+				
+				<!--  
 				<label for="faixaEtaria" class="atributo">Faixa Etária:</label>
 				<input type="text" id="faixaEtaria" name="faixaEtaria" class="entrada">
-				
+				-->
 				<label for="genero" class="atributo">Gênero:</label>
 				<input type="text" id="genero" name="genero" class="entrada">
 				
