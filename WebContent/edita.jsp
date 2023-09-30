@@ -19,10 +19,14 @@
 			
 			<form action="${editaFilmeServlet}" method="post" class="formulario">
 				<label for="nome" class="atributo">Nome:</label>
-				<input type="text" id="nome" name="nome" class="entrada" value="${filme.nome}"> 
+				<input type="text" id="nome" name="nome" class="entrada" required 
+				value="${filme.nome}"> 
 				
 				<label for="sinopse" class="atributo">Sinopse:</label>
-				<textarea id="sinopse" name="sinopse" rows="4" cols="50" class="entrada">${filme.sinopse}</textarea>
+				<textarea id="sinopse" name="sinopse" rows="4" cols="50" class="entrada" 
+				required maxlength="200">
+					filme.sinopse
+				</textarea>
 				
 				<select name="faixaEtaria" id="faixaEtaria" class="entrada">
 					<option value="Livre">Livre</option>
@@ -34,19 +38,20 @@
 				</select>
 				
 				<label for="genero" class="atributo">Gênero:</label>
-				<input type="text" id="genero" name="genero" class="entrada" value="${filme.genero}">
+				<input type="text" id="genero" name="genero" class="entrada" required value="${filme.genero}">
 				
 				<label for="elenco" class="atributo">Elenco:</label>
-				<input type="text" id="elenco" name="elenco" class="entrada" value="${filme.elenco}">
+				<input type="text" id="elenco" name="elenco" class="entrada" required>
 				
 				<label for="duracao" class="atributo">Duração:</label>
-				<input type="text" id="duracao" name="duracao" class="entrada" value="${filme.duracao}">
+				<input type="time" id="duracao" name="duracao" class="entrada" required>
 				
 				<label for="imagem" class="atributo">Imagem:</label>
-				<input type="text" id="imagem" name="imagem" class="entrada" value="${filme.imagem}">
+				<input type="url" id="imagem" name="imagem" class="entrada" required>
 				
 				<label for="anoLancamento" class="atributo">Lançamento:</label>
-				<input type="text" id="anoLancamento" name="anoLancamento" class="entrada" value="${filme.anoLancamento}">
+				<input type="text" id="anoLancamento" name="anoLancamento" class="entrada" 
+				pattern="[0-9]{4}" required>
 								
 				<input type="submit" value="Editar" class="botao">
 			</form>

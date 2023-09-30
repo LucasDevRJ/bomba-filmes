@@ -1,6 +1,10 @@
 package com.github.lucasdevrj.bombafilmes.servlet;
 
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -31,7 +35,14 @@ public class EditaFilmeServlet extends HttpServlet {
 		String anoLancamentoString = request.getParameter("anoLancamento");
 		
 		Integer id = Integer.valueOf(idString);
-		Integer duracao = Integer.valueOf(duracaoString);
+		SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
+		Date duracao = null;
+		try {
+			duracao = sdf.parse(duracaoString);
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		
 		Integer anoLancamento = Integer.valueOf(anoLancamentoString);
 		
 		BancoDeDados bancoDeDados = new BancoDeDados();
