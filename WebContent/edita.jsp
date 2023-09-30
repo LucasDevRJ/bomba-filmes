@@ -30,6 +30,7 @@
 				<textarea id="sinopse" name="sinopse" rows="4" cols="50" class="entrada" 
 				required maxlength="200">${filme.sinopse}</textarea>
 				
+				<label for="faixaEtaria" class="atributo">Faixa Etária:</label>
 				<select name="faixaEtaria" id="faixaEtaria" class="entrada">
 					<option value="Livre">Livre</option>
 					<option value="10">10 Anos</option>
@@ -40,8 +41,16 @@
 				</select>
 				
 				<label for="genero" class="atributo">Gênero:</label>
-				<input type="text" id="genero" name="genero" class="entrada" required
-				value="${filme.genero}">
+				<select name="genero" id="genero" class="entrada">
+					<option value="Ação">Ação</option>
+					<option value="Comédia">Comédia</option>
+					<option value="Drama">Drama</option>
+					<option value="Romance">Romance</option>
+					<option value="Documentário">Documentário</option>
+					<option value="Suspense">Suspense</option>
+					<option value="Terror">Terror</option>
+					<option value="Ficção científica">Ficção científica</option>
+				</select>
 				
 				<label for="elenco" class="atributo">Elenco:</label>
 				<input type="text" id="elenco" name="elenco" class="entrada" required
