@@ -60,6 +60,8 @@ public class NovoFilmeServlet extends HttpServlet {
 		request.setAttribute("imagem", filme.getImagem());
 		request.setAttribute("anoLancamento", filme.getAnoLancamento());
 		
+		System.out.println(filme.getGenero());
+		
 		response.sendRedirect("catalogo");
 	}
 }

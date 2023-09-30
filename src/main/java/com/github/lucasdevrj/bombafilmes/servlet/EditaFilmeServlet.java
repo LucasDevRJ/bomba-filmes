@@ -42,7 +42,6 @@ public class EditaFilmeServlet extends HttpServlet {
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
-		
 		Integer anoLancamento = Integer.valueOf(anoLancamentoString);
 		
 		BancoDeDados bancoDeDados = new BancoDeDados();
