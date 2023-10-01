@@ -31,32 +31,24 @@ public class UnicaEntradaServlet extends HttpServlet {
 			Catalogo catalogo = new Catalogo();
 			catalogo.catalogar(request, response);
 			
-		} 
-		
-		String parametroID = request.getParameter("id");
-		Integer id = Integer.valueOf(parametroID);
-		
-		BancoDeDados bancoDeDados = new BancoDeDados();
-		Filme filme = bancoDeDados.buscaFilme(id);
-		
-		if (parametroAcao.equals("cadastro")) {
+		} else if (parametroAcao.equals("cadastro")) {
 			System.out.println("Cadastrando Filme");
 			
 			Cadastro cadastro = new Cadastro();
 			cadastro.cadastrarFilme(request, response);
 			
-		} else if (parametroAcao.equals("remove") && id == filme.getId()) {
+		} else if (parametroAcao.equals("remove")) {
 			System.out.println("Removendo Filme");
 			
 			Remove remove = new Remove();
-			remove.removerFilme(request, response, id);
+			remove.removerFilme(request, response);
 			
-		} else if (parametroAcao.equals("exibe") && id == filme.getId()) {
+		} else if (parametroAcao.equals("exibe")) {
 			System.out.println("Exibindo Filme");
 			
 			Exibe exibe = new Exibe();
-			exibe.exibirFilme(request, response, id);
-			
+			exibe.exibirFilme(request, response);
+		
 		} 
 	}
 }

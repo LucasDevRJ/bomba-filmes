@@ -4,6 +4,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <c:url value="/cadastro" var="cadastro"/>
+<c:url value="/entrada" var="entrada"/>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -41,8 +42,8 @@
 							<p class="atributo">Elenco: ${filme.elenco} </p>
 							
 							<div class="catalogo-links">
-								<a href="/bomba-filmes/exibeFilme?id=${filme.id}">Editar</a>
-								<a href="/bomba-filmes/removeFilme?id=${filme.id}">Remover</a>
+								<a href="/bomba-filmes/entrada?acao=exibe&id=${filme.id}">Editar</a>
+								<a href="/bomba-filmes/entrada?acao=remove&id=${filme.id}">Remover</a>
 							</div>
 						</li>
 					</c:forEach>
@@ -50,7 +51,7 @@
 			</section>
 			
 			<section class="links">
-				<a  href="${cadastro}" class="botao">
+				<a  href="${entrada}" class="botao">
 					Cadastrar Filme
 				</a>
 			</section>

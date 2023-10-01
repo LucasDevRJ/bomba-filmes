@@ -11,15 +11,17 @@ import com.github.lucasdevrj.bombafilmes.modelos.BancoDeDados;
 
 public class Remove {
 
-	public void removerFilme(HttpServletRequest request, HttpServletResponse response, Integer id) 
+	public void removerFilme(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
 		
 		System.out.println("Excluindo Filme");
 		
+		String idString = request.getParameter("id");
+		Integer id = Integer.valueOf(idString);
+	
 		BancoDeDados filmes = new BancoDeDados();
 		filmes.removeFilme(id);
 		
-		RequestDispatcher rd = request.getRequestDispatcher("/catalogo.jsp");
-		rd.forward(request, response);
+		response.sendRedirect("catalogo");
 	}
 }

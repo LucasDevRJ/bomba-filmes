@@ -12,8 +12,11 @@ import com.github.lucasdevrj.bombafilmes.modelos.Filme;
 
 public class Exibe {
 
-	public void exibirFilme(HttpServletRequest request, HttpServletResponse response, Integer id) 
+	public void exibirFilme(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
+		
+		String idString = request.getParameter("id");
+		Integer id = Integer.valueOf(idString);
 		
 		BancoDeDados bancoDeDados = new BancoDeDados();
 		Filme filme = bancoDeDados.buscaFilme(id);
