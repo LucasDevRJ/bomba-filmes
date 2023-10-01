@@ -9,10 +9,9 @@ import javax.servlet.http.HttpServletResponse;
 
 public class Principal {
 	
-	public void exibeMenu(HttpServletRequest request, HttpServletResponse response) 
+	public String exibeMenu(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
 		
-		RequestDispatcher rd = request.getRequestDispatcher("/principal.jsp");
-		rd.forward(request, response);
+		return "forward:principal.jsp";
 	}
 }

@@ -12,7 +12,7 @@ import com.github.lucasdevrj.bombafilmes.modelos.Filme;
 
 public class Exibe {
 
-	public void exibirFilme(HttpServletRequest request, HttpServletResponse response) 
+	public String exibirFilme(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
 		
 		String idString = request.getParameter("id");
@@ -25,7 +25,6 @@ public class Exibe {
 		
 		request.setAttribute("filme", filme);
 		
-		RequestDispatcher rd = request.getRequestDispatcher("/edita.jsp");
-		rd.forward(request, response);
+		return "forward:edita.jsp";
 	}
 }

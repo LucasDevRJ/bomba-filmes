@@ -13,7 +13,7 @@ import com.github.lucasdevrj.bombafilmes.modelos.Filme;
 
 public class Edita {
 
-	public void editarFilme(HttpServletRequest request, HttpServletResponse response) 
+	public String editarFilme(HttpServletRequest request, HttpServletResponse response) 
 			throws IOException {
 		System.out.println("Alterando filme");
 		
@@ -47,7 +47,7 @@ public class Edita {
 		filme.setDuracao(duracao);
 		filme.setImagem(imagem);
 		filme.setAnoLancamento(anoLancamento);
-
-		response.sendRedirect("entrada?acao=catalogo");
+		
+		return "redirect:entrada?acao=catalogo";
 	}
 }

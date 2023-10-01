@@ -9,10 +9,9 @@ import javax.servlet.http.HttpServletResponse;
 
 public class Formulario {
 
-	public void cadastro(HttpServletRequest request, 
+	public String cadastro(HttpServletRequest request, 
 			HttpServletResponse response) throws ServletException, IOException {
 		
-		RequestDispatcher rd = request.getRequestDispatcher("/cadastro.jsp");
-		rd.forward(request, response);
+		return "forward:cadastro.jsp";
 	}
 }

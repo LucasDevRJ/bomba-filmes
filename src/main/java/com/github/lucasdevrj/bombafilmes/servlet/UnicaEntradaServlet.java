@@ -2,6 +2,7 @@ package com.github.lucasdevrj.bombafilmes.servlet;
 
 import java.io.IOException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -25,41 +26,50 @@ public class UnicaEntradaServlet extends HttpServlet {
 		
 		String parametroAcao = request.getParameter("acao");
 		
+		String parametro = null;
 		if (parametroAcao.equals("catalogo")) {
 			System.out.println("Exibindo catalogo");
 			
 			Catalogo catalogo = new Catalogo();
-			catalogo.catalogar(request, response);
+			parametro = catalogo.catalogar(request, response);
 			
 		} else if (parametroAcao.equals("cadastro")) {
 			System.out.println("Cadastrando Filme");
 			
 			Formulario formulario = new Formulario();
-			formulario.cadastro(request, response);
+			parametro = formulario.cadastro(request, response);
 			
 		} else if (parametroAcao.equals("remove")) {
 			System.out.println("Removendo Filme");
 			
 			Remove remove = new Remove();
-			remove.removerFilme(request, response);
+			parametro = remove.removerFilme(request, response);
 			
 		} else if (parametroAcao.equals("exibe")) {
 			System.out.println("Exibindo Filme");
 			
 			Exibe exibe = new Exibe();
-			exibe.exibirFilme(request, response);
+			parametro = exibe.exibirFilme(request, response);
 		
 		} else if (parametroAcao.equals("edita")) {
 			System.out.println("Editando Filme");
 			
 			Edita edita = new Edita();
-			edita.editarFilme(request, response);
+			parametro = edita.editarFilme(request, response);
 			
 		} else {
 			System.out.println("Principal");
 			
 			Principal principal = new Principal();
-			principal.exibeMenu(request, response);
+			parametro = principal.exibeMenu(request, response);
+		}
+		
+		String[] tipoEndereco = parametro.split(":");
+		if (tipoEndereco[0].equals("forward")) {
+			RequestDispatcher rd = request.getRequestDispatcher(tipoEndereco[1]);
+			rd.forward(request, response);
+		} else {
+			response.sendRedirect(tipoEndereco[1]);
 		}
 	}
 }
