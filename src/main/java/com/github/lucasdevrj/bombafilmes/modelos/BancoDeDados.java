@@ -15,12 +15,15 @@ public class BancoDeDados {
 	static {
 		String duracaoString = "01:50";
 		String duracaoString2 = "02:14";
+		String duracaoString3 = "01:39";
 		SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
 		Date duracao = null;
 		Date duracao2 = null;
+		Date duracao3 = null;
 		try {
 			duracao = sdf.parse(duracaoString);
 			duracao2 = sdf.parse(duracaoString2);
+			duracao3 = sdf.parse(duracaoString3);
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -41,6 +44,14 @@ public class BancoDeDados {
 		2014);
 		filme2.setId(BancoDeDados.identificador++);
 		filmes.add(filme2);
+		
+		Filme filme3 = new Filme("Sonic the Hedgehog", 
+				"Um ouriço extraterrestre é descoberto por um cientista com más intenções e planeja usar seus superpoderes para suas necessidades egoístas."
+				, "Livre", "Aventura", "Jim Carrey, Ben Schwartz, James Marsden", duracao3, 
+				"https://m.media-amazon.com/images/M/MV5BNTdmNmI4MzQtZTAzNS00MjhjLWEzOGQtZjI1NDNjZjk4N2JjXkEyXkFqcGdeQXVyMTM0NTUzNDIy._V1_.jpg",
+				2020);
+				filme3.setId(BancoDeDados.identificador++);
+				filmes.add(filme3);
 		
 		System.out.println(filme.getDuracao());
 	}
