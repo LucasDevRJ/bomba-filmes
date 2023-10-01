@@ -24,6 +24,7 @@ public class Exibe {
 		System.out.println(filme.getNome());
 		
 		request.setAttribute("filme", filme);
+		
 		RequestDispatcher rd = request.getRequestDispatcher("/edita.jsp");
 		rd.forward(request, response);
 	}

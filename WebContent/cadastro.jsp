@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<c:url value="/novoFilme" var="novoFilmeServlet"/>
+<c:url value="/entrada?acao=cadastro" var="cadastro"/>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -17,7 +17,7 @@
 		<main class="principal">
 			<h2 class="titulo">Cadastrar Filme</h2>
 			
-			<form action="${novoFilmeServlet}" method="post" class="formulario">
+			<form action="${cadastro}" method="post" class="formulario">
 				<label for="nome" class="atributo">Nome:</label>
 				<input type="text" id="nome" name="nome" class="entrada" required> 
 				

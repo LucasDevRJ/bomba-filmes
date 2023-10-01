@@ -12,6 +12,8 @@ import com.github.lucasdevrj.bombafilmes.acoes.Cadastro;
 import com.github.lucasdevrj.bombafilmes.acoes.Catalogo;
 import com.github.lucasdevrj.bombafilmes.acoes.Edita;
 import com.github.lucasdevrj.bombafilmes.acoes.Exibe;
+import com.github.lucasdevrj.bombafilmes.acoes.Formulario;
+import com.github.lucasdevrj.bombafilmes.acoes.Principal;
 import com.github.lucasdevrj.bombafilmes.acoes.Remove;
 
 @WebServlet("/entrada")
@@ -33,8 +35,8 @@ public class UnicaEntradaServlet extends HttpServlet {
 		} else if (parametroAcao.equals("cadastro")) {
 			System.out.println("Cadastrando Filme");
 			
-			Cadastro cadastro = new Cadastro();
-			cadastro.cadastrarFilme(request, response);
+			Formulario formulario = new Formulario();
+			formulario.cadastro(request, response);
 			
 		} else if (parametroAcao.equals("remove")) {
 			System.out.println("Removendo Filme");
@@ -53,6 +55,12 @@ public class UnicaEntradaServlet extends HttpServlet {
 			
 			Edita edita = new Edita();
 			edita.editarFilme(request, response);
+			
+		} else {
+			System.out.println("Principal");
+			
+			Principal principal = new Principal();
+			principal.exibeMenu(request, response);
 		}
 	}
 }
