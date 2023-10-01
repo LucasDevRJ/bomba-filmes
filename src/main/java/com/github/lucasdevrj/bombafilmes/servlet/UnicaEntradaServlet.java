@@ -10,10 +10,9 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.github.lucasdevrj.bombafilmes.acoes.Cadastro;
 import com.github.lucasdevrj.bombafilmes.acoes.Catalogo;
+import com.github.lucasdevrj.bombafilmes.acoes.Edita;
 import com.github.lucasdevrj.bombafilmes.acoes.Exibe;
 import com.github.lucasdevrj.bombafilmes.acoes.Remove;
-import com.github.lucasdevrj.bombafilmes.modelos.BancoDeDados;
-import com.github.lucasdevrj.bombafilmes.modelos.Filme;
 
 @WebServlet("/entrada")
 public class UnicaEntradaServlet extends HttpServlet {
@@ -49,6 +48,11 @@ public class UnicaEntradaServlet extends HttpServlet {
 			Exibe exibe = new Exibe();
 			exibe.exibirFilme(request, response);
 		
-		} 
+		} else if (parametroAcao.equals("edita")) {
+			System.out.println("Editando Filme");
+			
+			Edita edita = new Edita();
+			edita.editarFilme(request, response);
+		}
 	}
 }

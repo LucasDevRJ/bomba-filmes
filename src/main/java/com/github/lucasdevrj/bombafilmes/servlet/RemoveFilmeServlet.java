@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.github.lucasdevrj.bombafilmes.modelos.BancoDeDados;
  
-@WebServlet("/removeFilme")
+//@WebServlet("/removeFilme")
 public class RemoveFilmeServlet extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;

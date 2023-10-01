@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.github.lucasdevrj.bombafilmes.modelos.BancoDeDados;
 import com.github.lucasdevrj.bombafilmes.modelos.Filme;
 
-@WebServlet("/novoFilme")
+//@WebServlet("/novoFilme")
 public class NovoFilmeServlet extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;

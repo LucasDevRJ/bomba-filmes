@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<c:url value="/editaFilme" var="editaFilmeServlet"/>
+<c:url value="/entrada?acao=edita" var="editaFilme"/>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -10,14 +10,14 @@
 		<title>Editar Filme</title>
 		<link rel="stylesheet" type="text/css" href="styles.css">
 	</head>
-	<body>
+	<body> 
 		<header class="cabecalho">
 			<h1 class="logo">Bomba Filmes</h1>
 		</header>
 		<main class="principal">
 			<h2 class="titulo">Editar Filme</h2>
 			
-			<form action="${editaFilmeServlet}" method="post" class="formulario">
+			<form action="${editaFilme}" method="post" class="formulario">
 				<label for="id" class="atributo">ID:</label>
 				<input type="text" id="id" name="id" class="entrada" required 
 				value="${filme.id}" readonly> 

@@ -22,6 +22,6 @@ public class Remove {
 		BancoDeDados filmes = new BancoDeDados();
 		filmes.removeFilme(id);
 		
-		response.sendRedirect("catalogo");
+		response.sendRedirect("entrada?acao=catalogo");
 	}
 }

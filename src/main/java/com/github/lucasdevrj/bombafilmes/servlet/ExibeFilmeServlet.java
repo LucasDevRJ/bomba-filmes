@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.github.lucasdevrj.bombafilmes.modelos.BancoDeDados;
 import com.github.lucasdevrj.bombafilmes.modelos.Filme;
 
-@WebServlet("/exibeFilme")
+//@WebServlet("/exibeFilme")
 public class ExibeFilmeServlet extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
