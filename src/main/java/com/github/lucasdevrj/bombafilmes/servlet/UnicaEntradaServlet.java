@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.github.lucasdevrj.bombafilmes.acoes.Catalogo;
+
 @WebServlet("/entrada")
 public class UnicaEntradaServlet extends HttpServlet {
 	
@@ -19,6 +21,11 @@ public class UnicaEntradaServlet extends HttpServlet {
 		
 		if (parametroAcao.equals("catalogo")) {
 			System.out.println("Exibindo catalogo");
+			
+			Catalogo catalogo = new Catalogo();
+			catalogo.catalogar(request, response);
+			
+			
 		} else if (parametroAcao.equals("cadastro")) {
 			System.out.println("Cadastrando Filme");
 		} else if (parametroAcao.equals("removeFilme")) {
