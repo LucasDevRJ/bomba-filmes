@@ -15,7 +15,7 @@ import com.github.lucasdevrj.bombafilmes.modelos.Filme;
 
 public class Cadastro {
 
-	public void cadastrarFilme(HttpServletRequest request, HttpServletResponse response) 
+	public String cadastrarFilme(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
 		
 		String nome = request.getParameter("nome");
@@ -58,6 +58,6 @@ public class Cadastro {
 		
 		System.out.println(filme.getGenero());
 		
-		response.sendRedirect("entrada?acao=catalogo");
+		return "redirect:entrada?acao=catalogo";
 	}
 }

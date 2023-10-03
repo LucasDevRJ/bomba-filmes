@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.github.lucasdevrj.bombafilmes.acoes.Cadastro;
 import com.github.lucasdevrj.bombafilmes.acoes.Catalogo;
 import com.github.lucasdevrj.bombafilmes.acoes.Edita;
 import com.github.lucasdevrj.bombafilmes.acoes.Exibe;
@@ -33,7 +34,7 @@ public class UnicaEntradaServlet extends HttpServlet {
 			Catalogo catalogo = new Catalogo();
 			parametro = catalogo.catalogar(request, response);
 			
-		} else if (parametroAcao.equals("cadastro")) {
+		} else if (parametroAcao.equals("formulario")) {
 			System.out.println("Cadastrando Filme");
 			
 			Formulario formulario = new Formulario();
@@ -57,8 +58,14 @@ public class UnicaEntradaServlet extends HttpServlet {
 			Edita edita = new Edita();
 			parametro = edita.editarFilme(request, response);
 			
+		} else if (parametroAcao.equals("cadastro")){
+			System.out.println("Cadastrando Filme");
+			
+			Cadastro cadastro = new Cadastro();
+			parametro = cadastro.cadastrarFilme(request, response);
+			
 		} else {
-			System.out.println("Principal");
+			System.out.println("Menu Principal");
 			
 			Principal principal = new Principal();
 			parametro = principal.exibeMenu(request, response);
