@@ -9,13 +9,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.github.lucasdevrj.bombafilmes.acoes.Cadastro;
-import com.github.lucasdevrj.bombafilmes.acoes.Catalogo;
-import com.github.lucasdevrj.bombafilmes.acoes.Edita;
-import com.github.lucasdevrj.bombafilmes.acoes.Exibe;
-import com.github.lucasdevrj.bombafilmes.acoes.Formulario;
-import com.github.lucasdevrj.bombafilmes.acoes.Principal;
-import com.github.lucasdevrj.bombafilmes.acoes.Remove;
+import com.github.lucasdevrj.bombafilmes.acoes.CadastrarFilme;
+import com.github.lucasdevrj.bombafilmes.acoes.CatalogarFilmes;
+import com.github.lucasdevrj.bombafilmes.acoes.EditarFilme;
+import com.github.lucasdevrj.bombafilmes.acoes.ExibirFilme;
+import com.github.lucasdevrj.bombafilmes.acoes.ExibirFormularioCadastro;
+import com.github.lucasdevrj.bombafilmes.acoes.ExibirMenuPrincipal;
+import com.github.lucasdevrj.bombafilmes.acoes.RemoverFilme;
 
 @WebServlet("/entrada")
 public class UnicaEntradaServlet extends HttpServlet {
@@ -29,49 +29,51 @@ public class UnicaEntradaServlet extends HttpServlet {
 		String classeNome = "com.github.lucasdevrj.bombafilmes.acoes." + parametroAcao;
 		
 		Class classe = Class.forName(classeNome);
+		Object obj = classe.newInstance();
+		String nome = obj.executa(request, response);
 		
 		String parametro = null;
 		if (parametroAcao.equals("catalogo")) {
 			System.out.println("Exibindo catalogo");
 			
-			Catalogo catalogo = new Catalogo();
-			parametro = catalogo.catalogar(request, response);
+			CatalogarFilmes catalogo = new CatalogarFilmes();
+			parametro = catalogo.executa(request, response);
 			
 		} else if (parametroAcao.equals("formulario")) {
 			System.out.println("Cadastrando Filme");
 			
-			Formulario formulario = new Formulario();
-			parametro = formulario.cadastro(request, response);
+			ExibirFormularioCadastro formulario = new ExibirFormularioCadastro();
+			parametro = formulario.executa(request, response);
 			
 		} else if (parametroAcao.equals("remove")) {
 			System.out.println("Removendo Filme");
 			
-			Remove remove = new Remove();
-			parametro = remove.removerFilme(request, response);
+			RemoverFilme remove = new RemoverFilme();
+			parametro = remove.executa(request, response);
 			
 		} else if (parametroAcao.equals("exibe")) {
 			System.out.println("Exibindo Filme");
 			
-			Exibe exibe = new Exibe();
-			parametro = exibe.exibirFilme(request, response);
+			ExibirFilme exibe = new ExibirFilme();
+			parametro = exibe.executa(request, response);
 		
 		} else if (parametroAcao.equals("edita")) {
 			System.out.println("Editando Filme");
 			
-			Edita edita = new Edita();
-			parametro = edita.editarFilme(request, response);
+			EditarFilme edita = new EditarFilme();
+			parametro = edita.executa(request, response);
 			
 		} else if (parametroAcao.equals("cadastro")){
 			System.out.println("Cadastrando Filme");
 			
-			Cadastro cadastro = new Cadastro();
-			parametro = cadastro.cadastrarFilme(request, response);
+			CadastrarFilme cadastro = new CadastrarFilme();
+			parametro = cadastro.executa(request, response);
 			
 		} else {
 			System.out.println("Menu Principal");
 			
-			Principal principal = new Principal();
-			parametro = principal.exibeMenu(request, response);
+			ExibirMenuPrincipal principal = new ExibirMenuPrincipal();
+			parametro = principal.executa(request, response);
 		}
 		
 		String[] tipoEndereco = parametro.split(":");

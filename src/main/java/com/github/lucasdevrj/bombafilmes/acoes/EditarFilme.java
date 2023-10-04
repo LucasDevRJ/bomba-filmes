@@ -5,19 +5,19 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.github.lucasdevrj.bombafilmes.modelos.BancoDeDados;
 import com.github.lucasdevrj.bombafilmes.modelos.Filme;
 
-public class Cadastro {
+public class EditarFilme implements Acao {
 
-	public String cadastrarFilme(HttpServletRequest request, HttpServletResponse response) 
-			throws ServletException, IOException {
+	public String executa(HttpServletRequest request, HttpServletResponse response) 
+			throws IOException {
+		System.out.println("Alterando filme");
 		
+		String idString = request.getParameter("id");
 		String nome = request.getParameter("nome");
 		String sinopse = request.getParameter("sinopse");
 		String faixaEtaria = request.getParameter("faixaEtaria");
@@ -27,8 +27,7 @@ public class Cadastro {
 		String imagem = request.getParameter("imagem");
 		String anoLancamentoString = request.getParameter("anoLancamento");
 		
-		System.out.println("Antes da formatação: " + duracaoString);
-				
+		Integer id = Integer.valueOf(idString);
 		SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
 		Date duracao = null;
 		try {
@@ -36,27 +35,18 @@ public class Cadastro {
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
-		
-		System.out.println("Após a formatação: " + duracao);
-		
-		Integer anoLancamento = Integer.parseInt(anoLancamentoString);
-		
-		Filme filme = new Filme(nome, sinopse, faixaEtaria, genero, elenco, duracao, 
-				imagem, anoLancamento);
+		Integer anoLancamento = Integer.valueOf(anoLancamentoString);
 		
 		BancoDeDados bancoDeDados = new BancoDeDados();
-		bancoDeDados.adicionaFilme(filme);
-		
-		request.setAttribute("nome", filme.getNome());
-		request.setAttribute("sinopse", filme.getSinopse());
-		request.setAttribute("faixaEtaria", filme.getFaixaEtaria());
-		request.setAttribute("genero", filme.getGenero());
-		request.setAttribute("elenco", filme.getElenco());
-		request.setAttribute("duracao", filme.getDuracao());
-		request.setAttribute("imagem", filme.getImagem());
-		request.setAttribute("anoLancamento", filme.getAnoLancamento());
-		
-		System.out.println(filme.getGenero());
+		Filme filme = bancoDeDados.buscaFilme(id);
+		filme.setNome(nome);
+		filme.setSinopse(sinopse);
+		filme.setFaixaEtaria(faixaEtaria);
+		filme.setGenero(genero);
+		filme.setElenco(elenco);
+		filme.setDuracao(duracao);
+		filme.setImagem(imagem);
+		filme.setAnoLancamento(anoLancamento);
 		
 		return "redirect:entrada?acao=catalogo";
 	}

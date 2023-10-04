@@ -7,11 +7,11 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class Formulario {
-
-	public String cadastro(HttpServletRequest request, 
-			HttpServletResponse response) throws ServletException, IOException {
+public class ExibirMenuPrincipal implements Acao {
+	
+	public String executa(HttpServletRequest request, HttpServletResponse response) 
+			throws ServletException, IOException {
 		
-		return "forward:cadastro.jsp";
+		return "forward:principal.jsp";
 	}
 }

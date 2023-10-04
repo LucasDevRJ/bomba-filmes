@@ -8,9 +8,9 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.github.lucasdevrj.bombafilmes.modelos.BancoDeDados;
 
-public class Remove {
+public class RemoverFilme implements Acao {
 
-	public String removerFilme(HttpServletRequest request, HttpServletResponse response) 
+	public String executa(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
 		
 		System.out.println("Excluindo Filme");

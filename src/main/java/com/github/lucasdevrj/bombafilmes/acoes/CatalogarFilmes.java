@@ -1,6 +1,7 @@
 package com.github.lucasdevrj.bombafilmes.acoes;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -9,21 +10,18 @@ import javax.servlet.http.HttpServletResponse;
 import com.github.lucasdevrj.bombafilmes.modelos.BancoDeDados;
 import com.github.lucasdevrj.bombafilmes.modelos.Filme;
 
-public class Exibe {
+public class CatalogarFilmes implements Acao {
 
-	public String exibirFilme(HttpServletRequest request, HttpServletResponse response) 
-			throws ServletException, IOException {
+	public String executa(HttpServletRequest request, 
+			HttpServletResponse response) throws ServletException, IOException {
 		
-		String idString = request.getParameter("id");
-		Integer id = Integer.valueOf(idString);
+		System.out.println("Listando Filmes");
 		
 		BancoDeDados bancoDeDados = new BancoDeDados();
-		Filme filme = bancoDeDados.buscaFilme(id);
+		List<Filme> catalogo = bancoDeDados.getFilmes();
 		
-		System.out.println(filme.getNome());
+		request.setAttribute("filmes", catalogo);
 		
-		request.setAttribute("filme", filme);
-		
-		return "forward:edita.jsp";
+		return "forward:catalogo.jsp";
 	}
 }
