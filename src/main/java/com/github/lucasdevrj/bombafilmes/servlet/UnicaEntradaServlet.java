@@ -26,6 +26,9 @@ public class UnicaEntradaServlet extends HttpServlet {
 			throws ServletException, IOException {
 		
 		String parametroAcao = request.getParameter("acao");
+		String classeNome = "com.github.lucasdevrj.bombafilmes.acoes." + parametroAcao;
+		
+		Class classe = Class.forName(classeNome);
 		
 		String parametro = null;
 		if (parametroAcao.equals("catalogo")) {

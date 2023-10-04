@@ -57,7 +57,7 @@
 				value="${filme.elenco}">
 				
 				<label for="duracao" class="atributo">Duração:</label>
-				<input type="time" id="duracao" name="duracao" class="entrada" required
+				<input type="time" id="duracao" name="duracao" class="entrada" required 
 				value="${filme.duracao}">
 				
 				<label for="imagem" class="atributo">Imagem:</label>

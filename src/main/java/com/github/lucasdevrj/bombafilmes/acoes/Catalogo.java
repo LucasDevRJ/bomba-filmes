@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.github.lucasdevrj.bombafilmes.modelos.BancoDeDados;
 import com.github.lucasdevrj.bombafilmes.modelos.Filme;
 
-public class Catalogo {
+public class Catalogo implements Acao {
 
 	public String catalogar(HttpServletRequest request, 
 			HttpServletResponse response) throws ServletException, IOException {
