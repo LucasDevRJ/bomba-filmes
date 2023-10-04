@@ -9,10 +9,16 @@ import java.util.List;
 
 public class BancoDeDados {
 
+	private static List<Usuario> usuarios = new ArrayList<>();
 	private static List<Filme> filmes = new ArrayList<>();
 	private static Integer identificador = 1;
 	
 	static {
+		Usuario usuario = new Usuario("Lucas", "adm");
+		Usuario usuario2 = new Usuario("Roberta", "adm");
+		usuarios.add(usuario);
+		usuarios.add(usuario2);
+		
 		String duracaoString = "01:50";
 		String duracaoString2 = "02:14";
 		String duracaoString3 = "01:39";
