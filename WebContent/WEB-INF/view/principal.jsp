@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ page import="java.util.List, com.github.lucasdevrj.bombafilmes.modelos.Filme"%>
+<%@ page import="java.util.List, com.github.lucasdevrj.bombafilmes.acoes.Login"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <c:url value="/entrada?acao=ExibirFormularioCadastro" var="cadastro"/>
 <c:url value="/entrada?acao=CatalogarFilmes" var="catalogo"/>
@@ -15,6 +16,7 @@
 	<body>
 		<header class="cabecalho">
 			<h1 class="logo">Bomba Filmes</h1>
+			<h3>${usuarioLogado.login}</h3>
 		</header>
 		
 		<main class="principal">
