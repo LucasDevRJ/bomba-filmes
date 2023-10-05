@@ -92,4 +92,13 @@ public class BancoDeDados {
 		}
 		return null;
 	}
+
+	public Usuario existeUsuario(String login, String senha) {
+		for (Usuario usuario : usuarios) {
+			if (usuario.ehIgual(login, senha)) {
+				return usuario;
+			}
+		}
+		return null;
+	}
 }

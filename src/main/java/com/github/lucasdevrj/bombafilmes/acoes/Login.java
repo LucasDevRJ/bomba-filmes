@@ -6,6 +6,9 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.github.lucasdevrj.bombafilmes.modelos.BancoDeDados;
+import com.github.lucasdevrj.bombafilmes.modelos.Usuario;
+
 public class Login implements Acao {
 
 	@Override
@@ -15,7 +18,14 @@ public class Login implements Acao {
 		String login = request.getParameter("login");
 		String senha = request.getParameter("senha");
 		
-		return "redirect:entrada?acao=ExibirMenuPrincipal";
+		BancoDeDados bancoDeDados = new BancoDeDados();
+		Usuario usuario = bancoDeDados.existeUsuario(login, senha);
+		
+		if (usuario != null) {
+			System.out.println("Usuário existe!!");
+			return "redirect:entrada?acao=ExibirMenuPrincipal";
+		}
+		
+		return "forward:login.jsp";
 	}
-
 }

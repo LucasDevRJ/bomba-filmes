@@ -19,10 +19,10 @@
 			
 			<form action="${cadastro}" method="post" class="formulario-login">
 				<label for="login" class="atributo">Login:</label>
-				<input type="text" id="login" name="login" class="entrada" required> 
+				<input type="text" id="login" name="login" class="entrada"> 
 				
 				<label for="senha" class="atributo">Senha:</label>
-				<input type="password" id="senha" name="senha" class="entrada" required>
+				<input type="password" id="senha" name="senha" class="entrada">
 				
 				<input type="submit" value="Entrar" class="botao">
 			</form>
