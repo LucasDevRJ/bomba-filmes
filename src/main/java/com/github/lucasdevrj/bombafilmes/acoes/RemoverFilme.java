@@ -21,6 +21,6 @@ public class RemoverFilme implements Acao {
 		BancoDeDados filmes = new BancoDeDados();
 		filmes.removeFilme(id);
 		
-		return "redirect:entrada?acao=catalogo";
+		return "redirect:entrada?acao=CatalogarFilmes";
 	}
 }

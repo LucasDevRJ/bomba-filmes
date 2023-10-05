@@ -48,6 +48,6 @@ public class EditarFilme implements Acao {
 		filme.setImagem(imagem);
 		filme.setAnoLancamento(anoLancamento);
 		
-		return "redirect:entrada?acao=catalogo";
+		return "redirect:entrada?acao=CatalogarFilmes";
 	}
 }

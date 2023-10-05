@@ -2,8 +2,8 @@
     pageEncoding="ISO-8859-1"%>
 <%@ page import="java.util.List, com.github.lucasdevrj.bombafilmes.modelos.Filme"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<c:url value="/entrada?acao=cadastro" var="cadastro"/>
-<c:url value="/entrada?acao=catalogo" var="catalogo"/>
+<c:url value="/entrada?acao=ExibirFormularioCadastro" var="cadastro"/>
+<c:url value="/entrada?acao=CatalogarFilmes" var="catalogo"/>
 
 <!DOCTYPE html>
 <html lang="pt-br">

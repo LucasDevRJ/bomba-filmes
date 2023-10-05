@@ -58,6 +58,6 @@ public class CadastrarFilme implements Acao {
 		
 		System.out.println(filme.getGenero());
 		
-		return "redirect:entrada?acao=catalogo";
+		return "redirect:entrada?acao=CatalogarFilmes";
 	}
 }

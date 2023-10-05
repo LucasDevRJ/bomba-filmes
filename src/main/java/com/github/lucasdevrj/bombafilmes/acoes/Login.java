@@ -15,7 +15,7 @@ public class Login implements Acao {
 		String login = request.getParameter("login");
 		String senha = request.getParameter("senha");
 		
-		return "redirect:entrada?acao=catalogo";
+		return "redirect:entrada?acao=ExibirMenuPrincipal";
 	}
 
 }
