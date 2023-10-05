@@ -73,6 +73,14 @@
 	padding: 50px 30px;
 }
 
+.formulario-login {
+	padding: 50px 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
 .entrada {
 	margin: 15px 0;
 	padding: 10px 14px;
