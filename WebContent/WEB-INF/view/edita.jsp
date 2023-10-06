@@ -13,7 +13,7 @@
 	<body> 
 		<header class="cabecalho">
 			<h1 class="logo">Bomba Filmes</h1>
-			<h3>${usuarioLogado.login}</h3>
+			<a href="entrada?acao=Logout" class="logout">Sair</a>
 		</header>
 		
 		<main class="principal">

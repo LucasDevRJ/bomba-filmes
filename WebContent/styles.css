@@ -10,9 +10,16 @@
 	justify-content: space-between;
 }
 
-.logo, .usuario {
+.logo {
 	color: #FFFFFF;
 }
+
+.logout {
+	color: #FFFFFF;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 25px;
+} 
 
 .principal {
 	padding: 80px 0;
