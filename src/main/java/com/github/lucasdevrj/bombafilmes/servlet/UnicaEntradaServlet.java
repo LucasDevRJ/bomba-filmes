@@ -19,7 +19,7 @@ import com.github.lucasdevrj.bombafilmes.acoes.ExibirFormularioCadastro;
 import com.github.lucasdevrj.bombafilmes.acoes.ExibirMenuPrincipal;
 import com.github.lucasdevrj.bombafilmes.acoes.RemoverFilme;
 
-@WebServlet("/entrada")
+//@WebServlet("/entrada")
 public class UnicaEntradaServlet extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
@@ -29,15 +29,15 @@ public class UnicaEntradaServlet extends HttpServlet {
 		
 		String parametroAcao = request.getParameter("acao");
 		
-		HttpSession sessao = request.getSession();
-		boolean usuarioNaoEstaLogado = (sessao.getAttribute("usuarioLogado") == null);
-		boolean ehUmaAcaoProtegida = !(parametroAcao.equals("Login") 
-				|| parametroAcao.equals("ExibirFormularioLogin"));
-		
-		if (ehUmaAcaoProtegida & usuarioNaoEstaLogado) {
-			response.sendRedirect("redirect:entrada?acao=ExibirFormularioLogin");
-			return;
-		}
+//		HttpSession sessao = request.getSession();
+//		boolean usuarioNaoEstaLogado = (sessao.getAttribute("usuarioLogado") == null);
+//		boolean ehUmaAcaoProtegida = !(parametroAcao.equals("Login") 
+//				|| parametroAcao.equals("ExibirFormularioLogin"));
+//		
+//		if (ehUmaAcaoProtegida & usuarioNaoEstaLogado) {
+//			response.sendRedirect("redirect:entrada?acao=ExibirFormularioLogin");
+//			return;
+//		}
 		
 		
 		String classeNome = "com.github.lucasdevrj.bombafilmes.acoes." + parametroAcao;
