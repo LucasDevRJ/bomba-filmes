@@ -11,10 +11,7 @@
 		<link rel="stylesheet" type="text/css" href="styles.css">
 	</head>
 	<body>
-		<header class="cabecalho">
-			<h1 class="logo">Bomba Filmes</h1>
-			<a href="entrada?acao=Logout" class="logout">Sair</a>
-		</header>
+		<c:import url="cabecalho.jsp"></c:import>
 		
 		<main class="principal">
 			<h2 class="titulo">Cadastrar Filme</h2>
