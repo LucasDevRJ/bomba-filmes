@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.github.lucasdevrj.bombafilmes.acoes.Acao;
 import com.github.lucasdevrj.bombafilmes.acoes.CadastrarFilme;
@@ -27,6 +28,18 @@ public class UnicaEntradaServlet extends HttpServlet {
 			throws ServletException, IOException {
 		
 		String parametroAcao = request.getParameter("acao");
+		
+		HttpSession sessao = request.getSession();
+		boolean usuarioNaoEstaLogado = (sessao.getAttribute("usuarioLogado") == null);
+		boolean ehUmaAcaoProtegida = !(parametroAcao.equals("Login") 
+				|| parametroAcao.equals("ExibirFormularioLogin"));
+		
+		if (ehUmaAcaoProtegida & usuarioNaoEstaLogado) {
+			response.sendRedirect("redirect:entrada?acao=ExibirFormularioLogin");
+			return;
+		}
+		
+		
 		String classeNome = "com.github.lucasdevrj.bombafilmes.acoes." + parametroAcao;
 		
 		String nome;

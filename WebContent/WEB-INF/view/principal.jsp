@@ -16,7 +16,7 @@
 	<body>
 		<header class="cabecalho">
 			<h1 class="logo">Bomba Filmes</h1>
-			<h3>${usuarioLogado.login}</h3>
+			<h3 class="usuario">${usuarioLogado.login}</h3>
 		</header>
 		
 		<main class="principal">

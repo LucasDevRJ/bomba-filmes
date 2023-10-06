@@ -6,9 +6,11 @@
 .cabecalho {
 	padding: 100px 50px;
 	background-color: #c21a01;
+	display: flex;
+	justify-content: space-between;
 }
 
-.logo {
+.logo, .usuario {
 	color: #FFFFFF;
 }
 
