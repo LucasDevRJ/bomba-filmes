@@ -43,7 +43,7 @@ public class BancoDeDados {
 		"Quando a família de Mathilda, de 12 anos, é morta, seu vizinho Leon, que é um assassino profissional, relutantemente a coloca sob sua proteção e lhe ensina os segredos de seu ofício.",
 		"18", "Ação", "Jean Reno, Natalie Portman, Gary Oldman", duracao, 
 		"https://m.media-amazon.com/images/M/MV5BOTgyMWQ0ZWUtN2Q2MS00NmY0LWI3OWMtNjFkMzZlNDZjNTk0XkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_.jpg",
-		1994);
+		1994, usuario);
 		filme.setId(BancoDeDados.identificador++);
 		filmes.add(filme);
 		
@@ -51,7 +51,7 @@ public class BancoDeDados {
 		"Don, junto com sua tripulação de cinco membros, embarca em uma missão que coloca muitas vidas em perigo enquanto se preparam para atacar o exército nazista."
 		, "18", "Guerra", "Alicia von Rittberg, Jon Bernthal, Shia LaBeouf", duracao2, 
 		"https://m.media-amazon.com/images/M/MV5BMjA4MDU0NTUyN15BMl5BanBnXkFtZTgwMzQxMzY4MjE@._V1_.jpg",
-		2014);
+		2014, usuario2);
 		filme2.setId(BancoDeDados.identificador++);
 		filmes.add(filme2);
 		
@@ -59,7 +59,7 @@ public class BancoDeDados {
 				"Um ouriço extraterrestre é descoberto por um cientista com más intenções e planeja usar seus superpoderes para suas necessidades egoístas."
 				, "Livre", "Aventura", "Jim Carrey, Ben Schwartz, James Marsden", duracao3, 
 				"https://m.media-amazon.com/images/M/MV5BNTdmNmI4MzQtZTAzNS00MjhjLWEzOGQtZjI1NDNjZjk4N2JjXkEyXkFqcGdeQXVyMTM0NTUzNDIy._V1_.jpg",
-				2020);
+				2020, usuario2);
 				filme3.setId(BancoDeDados.identificador++);
 				filmes.add(filme3);
 		

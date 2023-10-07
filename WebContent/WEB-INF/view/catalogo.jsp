@@ -38,6 +38,7 @@
 								pattern="H'h' mm'm'"/></p>
 							</c:if>
 							<p class="atributo">Elenco: ${filme.elenco} </p>
+							<p class="atributo">Catalogado por: ${filme.usuario} </p>
 							
 							<div class="catalogo-links">
 								<a href="/bomba-filmes/entrada?acao=exibe&id=${filme.id}">Editar</a>

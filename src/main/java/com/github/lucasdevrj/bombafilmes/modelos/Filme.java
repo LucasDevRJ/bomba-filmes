@@ -13,9 +13,11 @@ public class Filme {
 	private Date duracao;
 	private String imagem;
 	private Integer anoLancamento;
+	private Usuario usuario;
 	
 	public Filme(String nome, String sinopse, String faixaEtaria, String genero, 
-			String elenco, Date duracao, String imagem, Integer anoLancamento) {
+			String elenco, Date duracao, String imagem, Integer anoLancamento, 
+			Usuario usuario) {
 		this.nome = nome;
 		this.sinopse = sinopse;
 		this.faixaEtaria = faixaEtaria;
@@ -24,6 +26,7 @@ public class Filme {
 		this.duracao = duracao;
 		this.imagem = imagem;
 		this.anoLancamento = anoLancamento;
+		this.usuario = usuario;
 	}
 	
 	public Integer getId() {
@@ -97,5 +100,13 @@ public class Filme {
 	
 	public void setAnoLancamento(Integer anoLancamento) {
 		this.anoLancamento = anoLancamento;
+	}
+	
+	public String getUsuario() {
+		return usuario.getLogin();
+	}
+	
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
 	}
 }
