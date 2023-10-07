@@ -10,7 +10,7 @@ import javax.servlet.http.HttpSession;
 import com.github.lucasdevrj.bombafilmes.modelos.BancoDeDados;
 import com.github.lucasdevrj.bombafilmes.modelos.Usuario;
 
-public class Login implements Acao {
+public class CadastrarUsuario implements Acao {
 
 	@Override
 	public String executa(HttpServletRequest request, HttpServletResponse response)
@@ -19,16 +19,15 @@ public class Login implements Acao {
 		String login = request.getParameter("login");
 		String senha = request.getParameter("senha");
 		
+		Usuario usuario = new Usuario(login, senha);
 		BancoDeDados bancoDeDados = new BancoDeDados();
-		Usuario usuario = bancoDeDados.existeUsuario(login, senha);
+		bancoDeDados.adicionaUsuario(usuario);
 		
-		if (usuario != null) {
-			HttpSession sessao = request.getSession();
-			sessao.setAttribute("usuarioLogado", usuario);
-			System.out.println("Usuário " + usuario.getLogin() + " logado com sucesso!");
-			return "redirect:entrada?acao=ExibirMenuPrincipal";
-		} 
+		HttpSession sessao = request.getSession();
+		sessao.setAttribute("usuarioLogado", usuario);
 		
-		return "forward:login.jsp";
+		System.out.println("Usuário " + usuario.getLogin() + " cadastrado com sucesso!");
+		
+		return "redirect:entrada?acao=ExibirMenuPrincipal";
 	}
 }

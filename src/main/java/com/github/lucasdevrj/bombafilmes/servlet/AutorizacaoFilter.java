@@ -28,9 +28,11 @@ public class AutorizacaoFilter extends HttpFilter implements Filter {
 		HttpSession sessao = request.getSession();
 		boolean usuarioNaoEstaLogado = (sessao.getAttribute("usuarioLogado") == null);
 		boolean ehUmaAcaoProtegida = !(parametroAcao.equals("Login") 
-				|| parametroAcao.equals("ExibirFormularioLogin"));
+				|| parametroAcao.equals("ExibirFormularioLogin") 
+				|| parametroAcao.equals("CadastrarUsuario")
+				|| parametroAcao.equals("ExibirFormularioUsuario"));
 		
-		if (ehUmaAcaoProtegida & usuarioNaoEstaLogado) {
+		if (ehUmaAcaoProtegida && usuarioNaoEstaLogado) {
 			response.sendRedirect("redirect:entrada?acao=ExibirFormularioLogin");
 			return;
 		}

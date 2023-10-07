@@ -15,7 +15,9 @@ public class BancoDeDados {
 	
 	static {
 		Usuario usuario = new Usuario("Lucas", "adm");
+		usuario.setId(BancoDeDados.identificador++);
 		Usuario usuario2 = new Usuario("Roberta", "adm");
+		usuario2.setId(BancoDeDados.identificador++);
 		usuarios.add(usuario);
 		usuarios.add(usuario2);
 		
@@ -102,5 +104,11 @@ public class BancoDeDados {
 			}
 		}
 		return null;
+	}
+	
+	public void adicionaUsuario(Usuario usuario) {
+		usuario.setId(BancoDeDados.identificador++);
+		BancoDeDados.usuarios.add(usuario);
+		System.out.println("O usuario " + usuario.getLogin() + " foi adicionado com sucesso!");
 	}
 }

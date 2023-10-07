@@ -2,12 +2,21 @@ package com.github.lucasdevrj.bombafilmes.modelos;
 
 public class Usuario {
 
+	private Integer id;
 	private String login;
 	private String senha;
 	
 	public Usuario(String login, String senha) {
 		this.login = login;
 		this.senha = senha;
+	}
+	
+	public Integer getId() {
+		return id;
+	}
+	
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
 	public String getLogin() {
