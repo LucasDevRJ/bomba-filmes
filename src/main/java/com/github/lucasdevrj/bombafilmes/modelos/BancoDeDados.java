@@ -35,6 +35,8 @@ public class BancoDeDados {
 			e.printStackTrace();
 		}
 		
+		System.out.println(duracao);
+		
 		Filme filme = new Filme("The Professional", 
 		"Quando a família de Mathilda, de 12 anos, é morta, seu vizinho Leon, que é um assassino profissional, relutantemente a coloca sob sua proteção e lhe ensina os segredos de seu ofício.",
 		"18", "Ação", "Jean Reno, Natalie Portman, Gary Oldman", duracao, 

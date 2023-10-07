@@ -19,5 +19,4 @@ public class Logout implements Acao {
 		
 		return "redirect:entrada?acao=ExibirFormularioLogin";
 	}
-
 }
