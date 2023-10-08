@@ -36,9 +36,7 @@ public class BancoDeDados {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		System.out.println(duracao);
-		
+				
 		Filme filme = new Filme("The Professional", 
 		"Quando a família de Mathilda, de 12 anos, é morta, seu vizinho Leon, que é um assassino profissional, relutantemente a coloca sob sua proteção e lhe ensina os segredos de seu ofício.",
 		"18", "Ação", "Jean Reno, Natalie Portman, Gary Oldman", duracao, 
@@ -62,14 +60,11 @@ public class BancoDeDados {
 				2020, usuario2);
 				filme3.setId(BancoDeDados.identificador++);
 				filmes.add(filme3);
-		
-		System.out.println(filme.getDuracao());
 	}
 	
 	public void adicionaFilme(Filme filme) {
 		filme.setId(BancoDeDados.identificador++);
 		BancoDeDados.filmes.add(filme);
-		System.out.println("O filme " + filme.getNome() + " foi adicionado com sucesso!");
 	}
 	
 	public void removeFilme(Integer id) {
@@ -109,6 +104,5 @@ public class BancoDeDados {
 	public void adicionaUsuario(Usuario usuario) {
 		usuario.setId(BancoDeDados.identificador++);
 		BancoDeDados.usuarios.add(usuario);
-		System.out.println("O usuario " + usuario.getLogin() + " foi adicionado com sucesso!");
 	}
 }

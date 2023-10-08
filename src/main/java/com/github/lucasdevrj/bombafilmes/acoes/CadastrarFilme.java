@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.github.lucasdevrj.bombafilmes.modelos.BancoDeDados;
 import com.github.lucasdevrj.bombafilmes.modelos.Filme;
+import com.github.lucasdevrj.bombafilmes.modelos.Usuario;
 
 public class CadastrarFilme implements Acao {
 
@@ -40,8 +41,10 @@ public class CadastrarFilme implements Acao {
 		
 		Integer anoLancamento = Integer.parseInt(anoLancamentoString);
 		
+		Usuario usuario = (Usuario) request.getAttribute("usuarioLogado");
+		
 		Filme filme = new Filme(nome, sinopse, faixaEtaria, genero, elenco, duracao, 
-				imagem, anoLancamento);
+				imagem, anoLancamento, usuario);
 		
 		BancoDeDados bancoDeDados = new BancoDeDados();
 		bancoDeDados.adicionaFilme(filme);
