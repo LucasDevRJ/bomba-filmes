@@ -4,8 +4,7 @@
 <%@ page import="java.util.List, com.github.lucasdevrj.bombafilmes.modelos.Usuario"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
-<c:url value="/cadastro" var="cadastro"/>
-<c:url value="/entrada?acao=ExibirFormularioCadastro" var="entrada"/>
+<c:url value="/entrada?acao=ExibirFormularioCadastro" var="cadastro"/>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -53,7 +52,7 @@
 			</section>
 			
 			<section class="links">
-				<a  href="${entrada}" class="botao">
+				<a  href="${cadastro}" class="botao">
 					Cadastrar Filme
 				</a>
 			</section>
