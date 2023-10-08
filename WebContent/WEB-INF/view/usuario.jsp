@@ -16,10 +16,10 @@
 		<main class="principal">
 			<form action="${cadastro}" method="post" class="formulario">
 				<label for="login" class="atributo-formulario">Usuario:</label>
-				<input type="text" id="login" name="login" class="entrada"> 
+				<input type="text" id="login" name="login" class="entrada" required> 
 				
 				<label for="senha" class="atributo-formulario">Senha:</label>
-				<input type="password" id="senha" name="senha" class="entrada">
+				<input type="password" id="senha" name="senha" class="entrada" required>
 				
 				<input type="submit" value="Cadastrar" class="botao">
 			</form>
