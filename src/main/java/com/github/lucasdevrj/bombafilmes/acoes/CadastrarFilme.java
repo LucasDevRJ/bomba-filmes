@@ -8,6 +8,7 @@ import java.util.Date;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.github.lucasdevrj.bombafilmes.modelos.BancoDeDados;
 import com.github.lucasdevrj.bombafilmes.modelos.Filme;
@@ -41,7 +42,10 @@ public class CadastrarFilme implements Acao {
 		
 		Integer anoLancamento = Integer.parseInt(anoLancamentoString);
 		
-		Usuario usuario = (Usuario) request.getAttribute("usuarioLogado");
+		HttpSession sessao = request.getSession();
+		Usuario usuario = (Usuario) sessao.getAttribute("usuarioLogado");
+		
+		System.out.println(usuario.getLogin());
 		
 		Filme filme = new Filme(nome, sinopse, faixaEtaria, genero, elenco, duracao, 
 				imagem, anoLancamento, usuario);
