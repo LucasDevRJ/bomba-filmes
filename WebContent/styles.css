@@ -86,8 +86,17 @@
 	padding: 50px 30px;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
 	align-items: center;
+	justify-content: flex-start;
+}
+
+.divisao-login {
+	display: flex;
+	flex-direction: column;
+}
+
+.cadastro {
+	margin-bottom: 15px;
 }
 
 .atributo-formulario {

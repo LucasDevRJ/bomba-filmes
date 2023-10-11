@@ -20,13 +20,17 @@
 			<h2 class="titulo">Login</h2>
 			
 			<form action="${cadastro}" method="post" class="formulario-login">
-				<label for="login" class="atributo-formulario">Login:</label>
-				<input type="text" id="login" name="login" class="entrada" required> 
+				<div class="divisao-login">
+					<label for="login" class="atributo-formulario">Login:</label>
+					<input type="text" id="login" name="login" class="entrada" required> 
+				</div>
 				
-				<label for="senha" class="atributo-formulario">Senha:</label>
-				<input type="password" id="senha" name="senha" class="entrada" required>
+				<div class="divisao-login">
+					<label for="senha" class="atributo-formulario">Senha:</label>
+					<input type="password" id="senha" name="senha" class="entrada" required>
+				</div>
 				
-				<a href="${usuario}">Cadastrar Usuario</a>
+				<a href="${usuario}" class="cadastro">Cadastrar Usuario</a>
 				
 				<input type="submit" value="Entrar" class="botao">
 			</form>
