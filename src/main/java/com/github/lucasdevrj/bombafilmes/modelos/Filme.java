@@ -14,6 +14,7 @@ public class Filme {
 	private String imagem;
 	private Integer anoLancamento;
 	private Usuario usuario;
+	private Integer nota;
 	
 	public Filme(String nome, String sinopse, String faixaEtaria, String genero, 
 			String elenco, Date duracao, String imagem, Integer anoLancamento, 
@@ -108,5 +109,13 @@ public class Filme {
 	
 	public void setUsuario(Usuario usuario) {
 		this.usuario = usuario;
+	}
+	
+	public Integer getNota() {
+		return nota;
+	}
+	
+	public void setNota(Integer nota) {
+		this.nota = nota;
 	}
 }

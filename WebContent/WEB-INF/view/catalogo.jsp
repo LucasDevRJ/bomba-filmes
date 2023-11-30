@@ -39,12 +39,14 @@
 								</c:if>
 								<p class="atributo">Elenco: ${filme.elenco} </p>
 								<p class="atributo">Catalogado por: ${filme.usuario} </p>
+								<p class="atributo">Sua Nota: ${filme.nota} </p>
 								
 								<div class="catalogo-links">
 									<c:if test="${filme.usuario == usuarioLogado.login}">
 										<a href="/bomba-filmes/entrada?acao=ExibirFilme&id=${filme.id}">Editar</a>
 										<a href="/bomba-filmes/entrada?acao=RemoverFilme&id=${filme.id}">Remover</a>
 									</c:if>
+									<a href="/bomba-filmes/entrada?acao=ExibirAvaliacaoFilme&id=${filme.id}">Avaliar</a>
 								</div>
 							</li>
 					</c:forEach>
