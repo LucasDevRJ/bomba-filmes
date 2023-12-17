@@ -1,6 +1,6 @@
-![Capa LucasDevRJ](https://github.com/LucasDevRJ/buscador-de-cep/assets/95040236/f25891cf-5465-493b-914f-b919a6daed5e)
+![Capa LucasDevRJ](https://github.com/LucasDevRJ/bomba-filmes/assets/95040236/99224e66-75ac-4a7c-92ea-b6ebdfc50c88)
 
-<h1 align="center">Buscador de CEP</h1>
+<h1 align="center">Bomba Filmes</h1>
 
 ![Badge do Desenvolvedor](https://img.shields.io/badge/Desenvolvedor-LucasDevRJ-%23000000)
 ![Badge do nome do projeto](https://img.shields.io/badge/Projeto-Bomba_Filmes-%23000000)
