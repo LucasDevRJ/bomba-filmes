@@ -4,7 +4,7 @@
 
 ![Badge do Desenvolvedor](https://img.shields.io/badge/Desenvolvedor-LucasDevRJ-%23000000)
 ![Badge do nome do projeto](https://img.shields.io/badge/Projeto-Bomba_Filmes-%23000000)
-![Badge da Data do projeto](https://img.shields.io/badge/Data-07/2023-%23000000)
+![Badge da Data do projeto](https://img.shields.io/badge/Data-11/2023-%23000000)
 ![Badge do Status do projeto](https://img.shields.io/badge/Status-Finalizado-%23000000)
 ![Badge da autoria do projeto](https://img.shields.io/badge/Autoral-Sim-%23000000)
 
