@@ -12,8 +12,12 @@
 
 ## Descrição
 
-Bomba Filmes é uma aplicação web, cuja o objetivo é cadastrar, exibir, editar, remover filmes, como também atribuir notas aos filmes cadastrados pelos usuários. Após o usuário efeturar seu login ou cadastrar sua conta na plataforma. Ele poderá cadastrar um filme e/ou atribuir notas aos que já estão cadastrados na plataforma, preenchendo somente uns campos referidos ao filme e pronto! Seu filme estará listado no catalogo, pdoendo ser visto por outros usuários e avaliado. Como também, o próprio usuário que cadastrou o filme pode excluí-lo ou edita-lo.
+Bomba Filmes é uma aplicação web, cuja o objetivo é cadastrar, exibir, editar, remover filmes, como também atribuir notas aos filmes cadastrados pelos usuários. Após o usuário efeturar seu login ou cadastrar sua conta na plataforma. Ele poderá cadastrar um filme e/ou atribuir notas aos que já estão cadastrados na plataforma, preenchendo somente uns campos referidos ao filme e pronto! Seu filme estará listado no catalogo, pdoendo ser visto por outros usuários e avaliado. Como também, o próprio usuário que cadastrou o filme pode excluí-lo ou edita-lo. Para visualizar melhor, se liga nessa [apresentação](https://www.linkedin.com/posts/lucas-pereira-de-lima-programador_java-jsp-servlet-activity-7124875025286934528-QwU7?utm_source=share&utm_medium=member_desktop) que fiz do projeto..
 
+## Galeria
+![image](https://github.com/LucasDevRJ/bomba-filmes/assets/95040236/1981e816-d1a8-4b38-b2ef-d6c087caf832)
+![image](https://github.com/LucasDevRJ/bomba-filmes/assets/95040236/26e905e9-e02a-4850-84da-057c96686036)
+![image](https://github.com/LucasDevRJ/bomba-filmes/assets/95040236/4d5c5dfd-72a7-400f-926c-a47a1514ba47)
 ![image](https://github.com/LucasDevRJ/bomba-filmes/assets/95040236/3a6e4533-aaea-49d5-b8ab-db8b8474e929)
 
 ## :hammer: Funcionalidades do projeto
@@ -23,8 +27,6 @@ Bomba Filmes é uma aplicação web, cuja o objetivo é cadastrar, exibir, edita
 - `Funcionalidade 3`: Editar Filme
 - `Funcionalidade 4`: Remover Filme
 - `Funcionalidade 5`: Avaliar Filme
-
->[!VIDEO]()
 
 # :file_folder: Acesso ao projeto
 
